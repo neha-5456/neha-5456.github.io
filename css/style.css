@@ -512,6 +512,9 @@
     .contact-content iframe {
         width: 100%;
     }
+    .col-9 {
+      width: 100% !important;
+    }
 }
 
 .testimonial-carousel .owl-dots .owl-dot img {
