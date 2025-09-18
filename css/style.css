@@ -481,6 +481,9 @@
     .testimonial-carousel .owl-dots {
         justify-content: start;
     }
+    .contact-content iframe {
+        width: 100%;
+    }
 }
 
 .testimonial-carousel .owl-dots .owl-dot img {
@@ -505,6 +508,7 @@
     }
 }
 /*** footer End ***/
+
 
 
 
