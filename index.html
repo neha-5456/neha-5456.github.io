@@ -1,48 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="utf-8">
         <title>Neha Jaiswal - Senior Backend Developer | Python & Django Architect</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Senior Backend Developer, Python, Django, REST API, AI Integration, LangChain" name="keywords">
-        <meta content="Senior Backend Developer with 4+ years of experience building scalable backend systems using Python and Django." name="description">
+        <meta content="Senior Backend Developer, Python, Django, REST API, AI Integration, LangChain, RAG, GenAI, Microservices, OpenAI" name="keywords">
+        <meta content="Senior Backend Developer with 4+ years building scalable APIs, GenAI pipelines, and ML-powered backends using Python, Django, LangChain." name="description">
 
-        <!-- Google Web Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-        <!-- Icon Font Stylesheet -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-
-        <!-- Libraries Stylesheet -->
         <link rel="stylesheet" href="lib/animate/animate.min.css"/>
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-
-        <!-- Customized Bootstrap Stylesheet -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+        <style>
+            /* ===== TECH BADGES ===== */
+            .tech-badge { display:inline-block; padding:4px 12px; margin:3px 4px; border-radius:20px; font-size:12px; font-weight:600; letter-spacing:0.3px; }
+            .badge-python { background:#3776AB22; color:#3776AB; border:1px solid #3776AB44; }
+            .badge-django { background:#092E2022; color:#092E20; border:1px solid #092E2044; }
+            .badge-ai { background:#7C3AED22; color:#7C3AED; border:1px solid #7C3AED44; }
+            .badge-db { background:#33669922; color:#336699; border:1px solid #33669944; }
+            .badge-devops { background:#FF990022; color:#CC7A00; border:1px solid #FF990044; }
+            .badge-ml { background:#E9437222; color:#E94372; border:1px solid #E9437244; }
+            .badge-api { background:#10B98122; color:#0D9668; border:1px solid #10B98144; }
+            .badge-cloud { background:#FF630022; color:#E55A00; border:1px solid #FF630044; }
+
+            /* ===== TYPING ANIMATION ===== */
+            .typing-text { border-right:3px solid #667eea; white-space:nowrap; overflow:hidden; animation:typing 3.5s steps(40) 1s forwards, blink 0.75s step-end infinite; max-width:0; display:inline-block; vertical-align:bottom; }
+            @keyframes typing { from{max-width:0} to{max-width:100%} }
+            @keyframes blink { 50%{border-color:transparent} }
+
+            /* ===== IMPACT NUMBERS ===== */
+            .impact-number { font-size:2.8rem; font-weight:800; line-height:1; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+            .impact-label { font-size:0.85rem; color:#666; font-weight:500; margin-top:6px; }
+            .impact-card { text-align:center; padding:25px 15px; border-radius:12px; background:#fff; box-shadow:0 2px 15px rgba(0,0,0,0.06); transition:transform 0.3s,box-shadow 0.3s; }
+            .impact-card:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.12); }
+
+            /* ===== ARCHITECTURE BOXES ===== */
+            .arch-box { background:#1a1a2e; color:#e0e0e0; border-radius:10px; padding:18px 22px; font-family:'Courier New',monospace; font-size:13px; line-height:1.7; margin:15px 0; border-left:3px solid #667eea; overflow-x:auto; }
+            .arch-box .arch-arrow { color:#667eea; font-weight:bold; }
+            .arch-box .arch-component { color:#7ee8fa; }
+            .arch-box .arch-label { color:#98d8c8; font-style:italic; }
+
+            /* ===== WHY HIRE ME ===== */
+            .why-card { border:none; border-radius:16px; padding:32px 28px; height:100%; transition:all 0.3s; position:relative; overflow:hidden; background:#fff; box-shadow:0 4px 20px rgba(0,0,0,0.05); }
+            .why-card::after { content:''; position:absolute; bottom:0; left:0; width:100%; height:4px; background:linear-gradient(90deg,#667eea,#764ba2); transform:scaleX(0); transition:transform 0.3s; transform-origin:left; }
+            .why-card:hover { transform:translateY(-8px); box-shadow:0 12px 35px rgba(102,126,234,0.15); }
+            .why-card:hover::after { transform:scaleX(1); }
+            .why-icon { width:60px; height:60px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:18px; }
+            .why-icon-arch { background:linear-gradient(135deg,#092E2015,#092E2025); color:#092E20; }
+            .why-icon-ai { background:linear-gradient(135deg,#7C3AED15,#7C3AED25); color:#7C3AED; }
+            .why-icon-perf { background:linear-gradient(135deg,#10B98115,#10B98125); color:#0D9668; }
+            .why-icon-team { background:linear-gradient(135deg,#E5870015,#E5870025); color:#CC7A00; }
+
+            /* ===== CAREER TIMELINE ===== */
+            .timeline-item { position:relative; padding-left:40px; padding-bottom:35px; border-left:2px solid #e0e0e0; }
+            .timeline-item:last-child { border-left:2px solid transparent; padding-bottom:0; }
+            .timeline-item::before { content:''; position:absolute; left:-8px; top:4px; width:14px; height:14px; border-radius:50%; background:#667eea; border:3px solid #fff; box-shadow:0 0 0 2px #667eea; }
+            .timeline-item.current::before { background:#10B981; box-shadow:0 0 0 2px #10B981; animation:pulse-dot 2s infinite; }
+            @keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 2px #10B981} 50%{box-shadow:0 0 0 6px #10B98140} }
+            .timeline-role { font-size:1.1rem; font-weight:700; color:#1a1a2e; margin-bottom:2px; }
+            .timeline-company { font-size:0.95rem; color:#667eea; font-weight:600; }
+            .timeline-date { font-size:0.8rem; color:#999; font-weight:500; text-transform:uppercase; letter-spacing:1px; }
+            .timeline-highlight { display:inline-block; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; margin:4px 4px 0 0; }
+            .tl-green { background:#10B98118; color:#0D9668; }
+            .tl-purple { background:#7C3AED18; color:#7C3AED; }
+            .tl-blue { background:#3776AB18; color:#3776AB; }
+
+            /* ===== PROJECT TAGS ===== */
+            .project-type-tag { display:inline-block; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
+            .tag-ai { background:#7C3AED18; color:#7C3AED; }
+            .tag-ml { background:#E9437218; color:#E94372; }
+            .tag-backend { background:#092E2018; color:#092E20; }
+            .tag-fullstack { background:#10B98118; color:#0D9668; }
+
+            /* ===== PROJECT IMPACT BAR ===== */
+            .project-impact { background:#f8f9fc; border-radius:8px; padding:12px 16px; margin:12px 0; display:flex; gap:20px; flex-wrap:wrap; }
+            .project-impact-item { display:flex; align-items:center; gap:6px; font-size:13px; }
+            .project-impact-item strong { color:#667eea; }
+
+            /* ===== LINKS ===== */
+            .live-link { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:6px; background:#10B981; color:#fff !important; font-size:13px; font-weight:600; text-decoration:none !important; transition:all 0.2s; }
+            .live-link:hover { background:#059669; transform:translateY(-1px); }
+
+            /* ===== CTA BANNER ===== */
+            .cta-banner { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:16px; padding:40px; text-align:center; margin:20px 0; }
+            .cta-banner h3 { color:#fff; font-weight:700; margin-bottom:10px; }
+            .cta-banner p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
+            .cta-btn { display:inline-block; padding:12px 30px; border-radius:8px; background:#fff; color:#667eea; font-weight:700; text-decoration:none; transition:all 0.2s; }
+            .cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,0,0,0.2); color:#764ba2; }
+
+            /* ===== PROBLEM-SOLUTION FORMAT ===== */
+            .ps-row { display:flex; gap:12px; margin:10px 0; align-items:flex-start; }
+            .ps-label { min-width:75px; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; text-align:center; flex-shrink:0; margin-top:2px; }
+            .ps-problem { background:#FEE2E2; color:#DC2626; }
+            .ps-solution { background:#D1FAE5; color:#059669; }
+            .ps-impact { background:#E0E7FF; color:#4338CA; }
+            .ps-text { font-size:14px; color:#444; line-height:1.5; }
+        </style>
     </head>
 
-
     <body>
-
-        <!-- Spinner Start -->
+        <!-- Spinner -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+            <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status"><span class="sr-only">Loading...</span></div>
         </div>
-        <!-- Spinner End -->
 
-
-        <!-- Navbar Start -->
+        <!-- Navbar -->
         <div class="container-fluid nav-section border-0">
             <nav class="navbar navbar-light">
                 <div class="navbar-nav flex-column">
@@ -53,20 +122,20 @@
                 </div>
             </nav>
         </div>
-        <!-- Navbar End -->
 
-        <!-- Header Start -->
+        <!-- ==================== HERO ==================== -->
         <div class="container-fluid" id="pigraHome">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-12 col-lg-3">
                         <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
                             <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
-                                <h1 class="display-6 text-white mb-0"> <img src="img/logo.jpg"  style="width:150px; height:150px; border-radius:50%;"/></h1>
+                                <h1 class="display-6 text-white mb-0"><img src="img/logo.jpg" style="width:150px;height:150px;border-radius:50%;"/></h1>
                             </a>
                             <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.3s">
-                                <p class="text-white sub-title">👋 Hello I'm Neha</p>
-                                <h1 class="display-6 text-white mb-0">Senior Backend Developer | Python &amp; Django Architect</h1>
+                                <p class="text-white sub-title">Hello I'm Neha</p>
+                                <h1 class="display-6 text-white mb-0">Senior Backend Developer</h1>
+                                <p class="text-white mt-2" style="opacity:0.7;font-size:0.95rem;">Python &amp; Django Architect | AI/GenAI Specialist</p>
                             </div>
                         </div>
                     </div>
@@ -75,29 +144,43 @@
                             <div class="row g-5">
                                 <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
-                                        <img src="img/header-img.jpg" class="img-fluid w-100" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Image">
+                                        <img src="img/header-img.jpg" class="img-fluid w-100" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Neha Jaiswal">
                                     </div>
                                 </div>
                                 <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h1 class="display-6 mb-4">Building Scalable Backends &amp; AI-Powered Systems</h1>
-                                    <p class="mb-4">Senior Backend Developer with 4+ years of experience architecting high-performance APIs, microservices, and GenAI backends using Python, Django, and LangChain.</p>
+                                    <p style="font-size:0.85rem;color:#667eea;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">BACKEND ENGINEER &bull; AI ARCHITECT &bull; PROBLEM SOLVER</p>
+                                    <h1 class="display-6 mb-3">I Build Systems That <span class="typing-text" style="color:#667eea;">Handle 50K+ Requests/Day</span></h1>
+                                    <p class="mb-3" style="font-size:1.05rem;line-height:1.7;color:#444;">From RESTful APIs processing thousands of daily requests to GenAI pipelines that make documents talk — I architect backend systems that <strong>actually ship to production</strong>.</p>
+
+                                    <div class="mb-3">
+                                        <span class="tech-badge badge-python">Python</span>
+                                        <span class="tech-badge badge-django">Django / DRF</span>
+                                        <span class="tech-badge badge-ai">LangChain</span>
+                                        <span class="tech-badge badge-db">PostgreSQL</span>
+                                        <span class="tech-badge badge-devops">AWS</span>
+                                        <span class="tech-badge badge-ml">OpenAI GPT-4</span>
+                                    </div>
+
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="fas fa-briefcase text-primary me-3"></i>
+                                        <p class="text-dark mb-0"><strong>Currently:</strong> Sr. Backend Dev &amp; AI Lead @ RTC Knowledge Services</p>
+                                    </div>
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="fas fa-map-marker-alt text-primary me-3"></i>
                                         <p class="text-dark mb-0">Noida, India</p>
                                     </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fas fa-envelope text-primary me-3"></i>
-                                        <p class="text-dark mb-0"><a href="/cdn-cgi/l/email-protection#7618131e174f4f1f0336111b171f1a5815191b" class="text-decoration-none"><span class="__cf_email__" data-cfemail="c5aba0ada4fcfcacb085a2a8a4aca9eba6aaa8">[email&#160;protected]</span></a></p>
-                                    </div>
                                     <div class="d-flex align-items-center mb-4">
-                                        <i class="fab fa-github text-primary me-3"></i>
-                                        <p class="text-dark mb-0"><a href="https://github.com/neha-5456">github.com/neha-5456</a></p>
+                                        <i class="fas fa-envelope text-primary me-3"></i>
+                                        <p class="text-dark mb-0"><a href="mailto:neha99iu@gmail.com" class="text-decoration-none">neha99iu@gmail.com</a></p>
                                     </div>
-                                    <div class="d-flex">
+                                    <div class="d-flex flex-wrap gap-2">
+                                        <a class="btn btn-primary py-2 px-4" href="#pigraContact"><i class="fas fa-paper-plane me-2"></i>Hire Me</a>
+                                        <a class="btn btn-outline-primary py-2 px-4" href="#"><i class="fas fa-download me-2"></i>Download CV</a>
+                                    </div>
+                                    <div class="d-flex mt-3">
                                         <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/neha-5456"><i class="fab fa-github text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
                                         <a class="btn btn-primary btn-sm-square me-3" href="https://www.youtube.com/@codeRevisit/"><i class="fab fa-youtube text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/coderevisit21720/"><i class="fab fa-instagram text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-0" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -106,10 +189,90 @@
                 </div>
             </div>
         </div>
-        <!-- Header End -->
 
+        <!-- ==================== IMPACT STATS ==================== -->
+        <div class="container-fluid" style="background:#f8f9fc;">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">At a Glance</p>
+                                <h1 class="display-6 text-white mb-0">Production Impact</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.1s"><div class="impact-card"><div class="impact-number">4+</div><div class="impact-label">Years in Production</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s"><div class="impact-card"><div class="impact-number">50K+</div><div class="impact-label">Daily API Requests</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s"><div class="impact-card"><div class="impact-number">6+</div><div class="impact-label">AI/ML Projects Shipped</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.4s"><div class="impact-card"><div class="impact-number">99.5%</div><div class="impact-label">API Uptime</div></div></div>
+                            </div>
+                            <div class="row g-4 mt-2">
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.5s"><div class="impact-card"><div class="impact-number">92%</div><div class="impact-label">ML Model ROC-AUC</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.6s"><div class="impact-card"><div class="impact-number">5+</div><div class="impact-label">Microservices Built</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.7s"><div class="impact-card"><div class="impact-number">3</div><div class="impact-label">Companies Served</div></div></div>
+                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.8s"><div class="impact-card"><div class="impact-number">3+</div><div class="impact-label">Juniors Mentored</div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <!-- About Start -->
+        <!-- ==================== WHY HIRE ME ==================== -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Value Proposition</p>
+                                <h1 class="display-6 text-white mb-0">Why Hire Me?</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="why-card">
+                                        <div class="why-icon why-icon-arch"><i class="fas fa-server"></i></div>
+                                        <h5 class="mb-2">I Ship Production Code, Not Demos</h5>
+                                        <p class="text-muted mb-0">Every project in my portfolio handles real users and real traffic. 50K+ daily requests, 99.5% uptime, live on Google Play — not tutorial clones or GitHub-only code.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="why-card">
+                                        <div class="why-icon why-icon-ai"><i class="fas fa-robot"></i></div>
+                                        <h5 class="mb-2">AI That Works in Production</h5>
+                                        <p class="text-muted mb-0">I don't just call OpenAI APIs. I build complete GenAI backends — RAG pipelines with FAISS/ChromaDB, embedding optimization, hallucination reduction, and cost-optimized inference.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="why-card">
+                                        <div class="why-icon why-icon-perf"><i class="fas fa-tachometer-alt"></i></div>
+                                        <h5 class="mb-2">Backend + ML = Full Pipeline</h5>
+                                        <p class="text-muted mb-0">Most backend devs can't do ML. Most ML engineers can't build APIs. I do both — from data preprocessing &amp; model training (92% ROC-AUC) to production REST endpoints.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
+                                    <div class="why-card">
+                                        <div class="why-icon why-icon-team"><i class="fas fa-users"></i></div>
+                                        <h5 class="mb-2">I Grow Teams, Not Just Code</h5>
+                                        <p class="text-muted mb-0">Currently mentoring 3 junior devs. I write code that others can maintain, define API contracts teams can work with, and establish review practices that improve quality.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== ABOUT + CAREER TIMELINE ==================== -->
         <div class="container-fluid" id="pigraAbout">
             <div class="container">
                 <div class="row g-0">
@@ -117,7 +280,7 @@
                         <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
                             <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
                                 <p class="text-white sub-title">About Me</p>
-                                <h1 class="display-6 text-white mb-0">Senior Backend Developer &amp; AI Integration Lead</h1>
+                                <h1 class="display-6 text-white mb-0">My Journey</h1>
                             </div>
                         </div>
                     </div>
@@ -126,7 +289,7 @@
                             <div class="row g-5">
                                 <div class="col-xl-5">
                                     <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <img src="img/about.jpg_large" class="img-fluid w-100" alt="Image">
+                                        <img src="img/about.jpg_large" class="img-fluid w-100" alt="Neha Jaiswal">
                                         <div class="sosial-icon">
                                             <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/neha-5456"><i class="fab fa-github text-white"></i></a>
                                             <a class="btn btn-primary btn-sm-square me-3" href="https://www.youtube.com/@codeRevisit/"><i class="fab fa-youtube text-white"></i></a>
@@ -134,17 +297,74 @@
                                             <a class="btn btn-primary btn-sm-square me-0" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h4 class="mb-4">Hello, I'm Neha Jaiswal</h4>
-                                    <p class="mb-4">Senior Backend Developer with 4+ years of experience designing, building, and scaling high-performance backend systems using Python and Django. I specialize in architecting RESTful APIs and microservices, optimizing databases, and deploying cloud-based solutions on AWS. Currently leading AI integration initiatives at RTC Knowledge Services, building production-grade GenAI backends using LangChain and RAG architecture.</p>
-                                    <div class="row g-4 mb-4">
-                                        <p class="mb-0"><strong class="fw-bold text-dark">Email:</strong> <a href="/cdn-cgi/l/email-protection#eb858e838ad2d2829eab8c868a8287c5888486" class="text-decoration-none"><span class="__cf_email__" data-cfemail="a9c7ccc1c89090c0dce9cec4c8c0c587cac6c4">[email&#160;protected]</span></a></p>
-                                        <p class="mb-0"><strong class="fw-bold text-dark">Location:</strong> Noida, India</p>
-                                        <p class="mb-0"><strong class="fw-bold text-dark">Current Role:</strong> Senior Backend Developer &amp; AI Integration Lead at RTC Knowledge Services</p>
-                                        <p><strong class="fw-bold text-dark">Nationality:</strong> Indian</p>
+
+                                    <!-- Career Timeline -->
+                                    <div class="mt-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <h5 class="mb-3" style="color:#667eea;font-weight:700;">Career Progression</h5>
+                                        <div class="timeline-item current">
+                                            <div class="timeline-date">Nov 2025 - Present</div>
+                                            <div class="timeline-role">Senior Backend Dev &amp; AI Lead</div>
+                                            <div class="timeline-company">RTC Knowledge Services</div>
+                                            <div><span class="timeline-highlight tl-purple">GenAI</span><span class="timeline-highlight tl-green">Team Lead</span></div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">Aug 2022 - Sep 2025</div>
+                                            <div class="timeline-role">Backend Developer</div>
+                                            <div class="timeline-company">Tech Prastish Software Solutions</div>
+                                            <div><span class="timeline-highlight tl-purple">RAG/LangChain</span><span class="timeline-highlight tl-blue">ML Pipelines</span></div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">Jan 2021 - Jul 2022</div>
+                                            <div class="timeline-role">Python / Django Developer</div>
+                                            <div class="timeline-company">Baseline IT Development</div>
+                                            <div><span class="timeline-highlight tl-blue">Django APIs</span><span class="timeline-highlight tl-green">Payment Integration</span></div>
+                                        </div>
+                                        <div class="timeline-item">
+                                            <div class="timeline-date">2016 - 2020</div>
+                                            <div class="timeline-role">B.Tech Computer Science</div>
+                                            <div class="timeline-company">SBSS University</div>
+                                        </div>
                                     </div>
-                                    <a href="#" class="btn btn-primary py-2 px-4"><i class="fas fa-download me-2"></i>Download My CV</a>
+                                </div>
+
+                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                    <h4 class="mb-3">I Don't Just Write Code — I Architect Solutions</h4>
+                                    <p class="mb-3" style="font-size:1.05rem;line-height:1.7;color:#444;">Over 4+ years, I've evolved from writing Django CRUD APIs to <strong>designing complete backend ecosystems</strong> — microservices handling 50K+ daily requests, GenAI pipelines that reduce LLM hallucinations, and ML models serving real-time predictions.</p>
+
+                                    <div style="background:#f8f9fc;border-radius:12px;padding:20px;margin-bottom:20px;">
+                                        <h6 style="color:#667eea;margin-bottom:12px;font-weight:700;">What I Actually Do Daily:</h6>
+                                        <div class="row g-2">
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Design API architectures</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Build RAG/LangChain pipelines</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Optimize DB queries (20%+ faster)</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Deploy on AWS with Docker</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Train &amp; serve ML models</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Mentor junior developers</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Define API contracts with teams</p></div>
+                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Code review &amp; quality gates</p></div>
+                                        </div>
+                                    </div>
+
+                                    <h6 style="font-weight:700;margin-bottom:10px;">Full Tech Stack:</h6>
+                                    <div class="mb-2">
+                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Languages &amp; Frameworks</small><br>
+                                        <span class="tech-badge badge-python">Python</span><span class="tech-badge badge-django">Django</span><span class="tech-badge badge-django">DRF</span><span class="tech-badge badge-api">REST APIs</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">AI / ML</small><br>
+                                        <span class="tech-badge badge-ai">LangChain</span><span class="tech-badge badge-ai">OpenAI GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-ml">FAISS</span><span class="tech-badge badge-ml">ChromaDB</span><span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Scikit-learn</span>
+                                    </div>
+                                    <div class="mb-2">
+                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Databases &amp; Caching</small><br>
+                                        <span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-db">MySQL</span><span class="tech-badge badge-devops">Redis</span><span class="tech-badge badge-devops">Celery</span>
+                                    </div>
+                                    <div class="mb-4">
+                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">DevOps &amp; Cloud</small><br>
+                                        <span class="tech-badge badge-cloud">AWS (EC2, S3, RDS)</span><span class="tech-badge badge-cloud">Docker</span><span class="tech-badge badge-devops">Nginx</span><span class="tech-badge badge-devops">CI/CD</span><span class="tech-badge badge-devops">Git</span>
+                                    </div>
+
+                                    <a href="#" class="btn btn-primary py-2 px-4 me-2"><i class="fas fa-download me-2"></i>Download CV</a>
+                                    <a href="#pigraContact" class="btn btn-outline-primary py-2 px-4"><i class="fas fa-paper-plane me-2"></i>Let's Talk</a>
                                 </div>
                             </div>
                         </div>
@@ -152,10 +372,374 @@
                 </div>
             </div>
         </div>
-        <!-- About End -->
 
+        <!-- ==================== PORTFOLIO ==================== -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Portfolio</p>
+                                <h1 class="display-6 text-white mb-0">What I've Built</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
 
-        <!-- Education Start -->
+                            <!-- PROJECT 1: Learnify -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ai">AI / FULL-STACK</span>
+                                        <h1 class="display-6 mb-2">Learnify</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Adaptive English Learning Platform with 8 AI-Powered Test Modules</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Students preparing for IELTS/TOEFL had no way to get instant, AI-driven feedback on speaking and writing — they had to wait for expensive human evaluators.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a Django backend integrating GPT-4 (essay grading), Whisper (speech-to-text), Edge TTS (listening tests), and DALL-E (image-based tests) into a unified assessment engine.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">8 intelligent test modules across 4 exam types. Real-time speech scoring. Automated essay grading with rubric feedback. Deployed on VPS with zero-downtime CI/CD.</div></div>
+
+                                        <div class="arch-box">
+                                            <span class="arch-label">Architecture:</span><br>
+                                            <span class="arch-component">Student</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Next.js</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Django REST API</span><br>
+                                            &nbsp;&nbsp;<span class="arch-arrow">|-&gt;</span> <span class="arch-component">GPT-4</span> <span class="arch-label">(grading)</span> <span class="arch-arrow">|-&gt;</span> <span class="arch-component">Whisper</span> <span class="arch-label">(STT)</span><br>
+                                            &nbsp;&nbsp;<span class="arch-arrow">|-&gt;</span> <span class="arch-component">Edge TTS</span> <span class="arch-label">(audio)</span> <span class="arch-arrow">|-&gt;</span> <span class="arch-component">DALL-E</span> <span class="arch-label">(images)</span><br>
+                                            &nbsp;&nbsp;<span class="arch-arrow">'-&gt;</span> <span class="arch-component">MySQL</span> <span class="arch-label">(scores + analytics)</span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django 4.2</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-ai">DALL-E</span><span class="tech-badge badge-db">MySQL</span><span class="tech-badge badge-devops">Nginx</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Learnify"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 2: GenAI Document Chatbot -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ai">GENAI / RAG</span>
+                                        <h1 class="display-6 mb-2">GenAI Document Chatbot</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Chat With Your Documents Using RAG + Vector Search</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Users needed to quickly find specific answers buried in large PDF/DOCX files — manual search was slow and LLMs without context hallucinated answers.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a RAG pipeline: chunk documents with overlap, embed via OpenAI, store in FAISS/ChromaDB, retrieve top-K context, then feed to GPT-4 for grounded answers.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Sub-second retrieval. Multi-format support. Significantly reduced hallucinations through strict context grounding and source attribution.</div></div>
+
+                                        <div class="arch-box">
+                                            <span class="arch-label">RAG Pipeline:</span><br>
+                                            <span class="arch-component">Upload</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Chunk</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Embed</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">FAISS Store</span><br>
+                                            <span class="arch-component">Query</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Embed</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Top-K</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">GPT-4</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Answer</span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-ai">LangChain</span><span class="tech-badge badge-ml">FAISS</span><span class="tech-badge badge-ml">ChromaDB</span><span class="tech-badge badge-ai">OpenAI</span><span class="tech-badge badge-django">Django</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="GenAI Chatbot"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 3: VISA Interview -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ai">AI / SPEECH</span>
+                                        <h1 class="display-6 mb-2">AI VISA Interview Prep</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Mock Interview Simulator with Real-Time Speech Analysis</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Visa applicants had no way to practice realistic interviews with instant feedback on their spoken responses — coaching was expensive and limited.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a real-time interview engine: Whisper converts speech to text, GPT-4 analyzes confidence/clarity/relevance, then generates adaptive follow-up questions.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Supports F1, B1/B2, H1B, Schengen visa types. Multi-dimension scoring. Adaptive difficulty. Session reports with improvement suggestions.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-db">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="VISA AI"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 4: SOP Writer -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ai">GENAI / NLP</span>
+                                        <h1 class="display-6 mb-2">AI SOP Writer &amp; Analyzer</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Generate &amp; Analyze University SOPs with AI</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Students struggled to write compelling SOPs — generic templates lacked personalization, and professional editors charged heavily per revision.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a prompt engineering pipeline that takes student profile + university + program to generate tailored SOPs, then analyzes across 4 dimensions with rewrite suggestions.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">University-specific generation for MS/MBA/PhD. 4-dimension scoring (structure, coherence, grammar, persuasiveness). Version history with diff tracking.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Prompt Engineering</span><span class="tech-badge badge-db">PostgreSQL</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="SOP Writer"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 5: Churn Prediction -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ml">MACHINE LEARNING</span>
+                                        <h1 class="display-6 mb-2">Customer Churn Prediction</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">End-to-End ML Pipeline with Production REST API</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Telecom company losing customers without knowing who was at risk — reactive retention efforts were too late and expensive.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built complete ML pipeline: feature engineering, trained 3 models (LR/RF/XGBoost), hyperparameter tuning with GridSearchCV, deployed as Django REST inference API.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text"><strong>92% ROC-AUC.</strong> Real-time predictions with confidence scores. Top-5 churn driver explanations for each customer. Feature importance dashboard for business teams.</div></div>
+
+                                        <div class="arch-box">
+                                            <span class="arch-label">Pipeline:</span> <span class="arch-component">Data</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Features</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">XGBoost</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Django API</span> = <span style="color:#7ee8fa;font-weight:bold;">92% ROC-AUC</span>
+                                        </div>
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Scikit-learn</span><span class="tech-badge badge-python">Pandas</span><span class="tech-badge badge-django">Django REST</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Churn"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 6: Fraud Detection -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-ml">ANOMALY DETECTION</span>
+                                        <h1 class="display-6 mb-2">Fraud Detection Service</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Real-Time Credit Card Fraud Screening</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Only 0.2% of credit card transactions are fraudulent — but missing them costs millions. Standard models overwhelmed by 99.8% legitimate data.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">SMOTE oversampling + ensemble of XGBoost (precision) and Isolation Forest (anomaly detection), with business-cost-function threshold optimization.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text"><strong>95%+ recall</strong> — catches 19 out of 20 fraud cases. Low-latency API for real-time transaction approve/flag/block decisions.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Isolation Forest</span><span class="tech-badge badge-ml">SMOTE</span><span class="tech-badge badge-python">Python</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Fraud"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- CTA BANNER mid-portfolio -->
+                            <div class="py-5 border-bottom">
+                                <div class="cta-banner wow fadeInUp" data-wow-delay="0.1s">
+                                    <h3>6 AI/ML Projects in Production. Ready for Your Next Challenge.</h3>
+                                    <p>I build backends that scale. I integrate AI that works. Let's talk about what I can build for you.</p>
+                                    <a href="#pigraContact" class="cta-btn">Get In Touch</a>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 7: EasyClean -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-backend">MOBILE BACKEND</span>
+                                        <h1 class="display-6 mb-2">EasyClean</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">On-Demand Laundry Service App</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">On-demand laundry services needed a backend to manage multi-partner networks, real-time driver tracking, and seamless scheduling.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Django REST backend with partner management, driver GPS tracking, slot-based scheduling engine, and payment gateway integration.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Live on Google Play. Real-time order tracking. Multi-partner network operational.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-devops">Flutter</span>
+                                        </div>
+                                        <a href="https://play.google.com/store/apps/details?id=com.easyclean.laundryowner" target="_blank" class="live-link"><i class="fab fa-google-play"></i> Google Play</a>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner">
+                                            <div class="scroll-gallery">
+                                                <div class="image-box"><img src="img/Screenshot1.png" alt="EasyClean 1"></div>
+                                                <div class="image-box"><img src="img/project2.png" alt="EasyClean 2"></div>
+                                                <div class="image-box"><img src="img/project4.png" alt="EasyClean 3"></div>
+                                                <div class="image-box"><img src="img/project5.png" alt="EasyClean 4"></div>
+                                            </div>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 8: Aap Ka Bazar -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-backend">MOBILE BACKEND</span>
+                                        <h1 class="display-6 mb-2">Aap Ka Bazar</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Online Grocery Platform with 10K+ Products</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Growing grocery business needed a scalable backend for 10K+ SKUs with real-time inventory sync and daily delivery logistics.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Django backend with real-time inventory management, order lifecycle engine, secure payments, and delivery route optimization.</div></div>
+                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">10,000+ products live. Daily deliveries operational. Live on Google Play.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-devops">Flutter</span>
+                                        </div>
+                                        <a href="https://play.google.com/store/apps/details?id=co.aapkabazar.app" target="_blank" class="live-link"><i class="fab fa-google-play"></i> Google Play</a>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner">
+                                            <div class="scroll-gallery">
+                                                <div class="image-box"><img src="img/p1.png" alt="Bazar 1"></div>
+                                                <div class="image-box"><img src="img/p2.png" alt="Bazar 2"></div>
+                                                <div class="image-box"><img src="img/p3.png" alt="Bazar 3"></div>
+                                                <div class="image-box"><img src="img/p4.png" alt="Bazar 4"></div>
+                                            </div>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 9: Musika -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-fullstack">WEB PLATFORM</span>
+                                        <h1 class="display-6 mb-2">Musika Lessons</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Music Education LMS — 3000+ Cities Worldwide</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">Large-scale platform connecting students with verified music teachers. Teacher onboarding, lesson scheduling, booking system with availability calendar &amp; payments.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-cloud">AWS</span>
+                                        </div>
+                                        <a href="https://www.musikalessons.com/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Musika"></div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 10: MyCar -->
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-fullstack">E-COMMERCE</span>
+                                        <h1 class="display-6 mb-2">MyCar</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Car Accessories E-Commerce — Greece</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">Complete backend redesign for car accessories e-commerce. Performance optimization, enhanced security, mobile-responsive experience.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Backend</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">Database</span>
+                                        </div>
+                                        <a href="https://mycar.gr/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section" style="margin-bottom:152px;">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner">
+                                            <iframe src="https://mycar.gr" width="100%" height="300px" style="border:1px solid #ccc;" title="MyCar" loading="lazy" allowfullscreen></iframe>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- PROJECT 11: Home Royale -->
+                            <div class="portfolio-item py-5 wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <span class="project-type-tag tag-fullstack">E-COMMERCE</span>
+                                        <h1 class="display-6 mb-2">Home Royale</h1>
+                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Premium Kitchenware — Australia</p>
+
+                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">E-commerce platform for premium kitchenware brand. Secure checkout, product management, performance optimization.</div></div>
+
+                                        <div class="mb-2">
+                                            <span class="tech-badge badge-django">Backend</span><span class="tech-badge badge-api">E-Commerce</span><span class="tech-badge badge-db">Database</span>
+                                        </div>
+                                        <a href="https://homeroyale.com.au/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                                    </div>
+                                    <div class="col-9 col-xl-6 portfolio-section">
+                                        <div class="portfolio-img"><div class="portfolio-img-inner">
+                                            <iframe src="https://homeroyale.com.au/" width="100%" height="300px" style="border:1px solid #ccc;" title="Home Royale" loading="lazy" allowfullscreen></iframe>
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SERVICES ==================== -->
+        <div class="container-fluid" id="pigraService">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Services</p>
+                                <h1 class="display-6 text-white mb-0">What I Can Build For You</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="service-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2"><i class="fas fa-server fa-3x"></i></div>
+                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">Backend Architecture</a></div>
+                                            <div class="col-xl-4"><p class="mb-0">Scalable RESTful APIs, microservices, and server-side systems designed for high-traffic production environments.</p></div>
+                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>Django / DRF APIs</p><p><i class="fa fa-check me-2"></i>PostgreSQL / Redis</p><p class="mb-0"><i class="fa fa-check me-2"></i>Celery / Task Queues</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2"><i class="fas fa-robot fa-3x"></i></div>
+                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">AI &amp; GenAI Integration</a></div>
+                                            <div class="col-xl-4"><p class="mb-0">RAG pipelines, LLM orchestration, AI chatbots, speech-to-text systems, and intelligent document processing.</p></div>
+                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>LangChain / RAG</p><p><i class="fa fa-check me-2"></i>OpenAI GPT-4 / Whisper</p><p class="mb-0"><i class="fa fa-check me-2"></i>FAISS / ChromaDB</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2"><i class="fas fa-brain fa-3x"></i></div>
+                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">ML Model Serving</a></div>
+                                            <div class="col-xl-4"><p class="mb-0">End-to-end ML pipelines from data preprocessing to real-time inference APIs for prediction and anomaly detection.</p></div>
+                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>XGBoost / Scikit-learn</p><p><i class="fa fa-check me-2"></i>Feature Pipelines</p><p class="mb-0"><i class="fa fa-check me-2"></i>Inference APIs</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2"><i class="fas fa-cloud fa-3x"></i></div>
+                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">Cloud &amp; DevOps</a></div>
+                                            <div class="col-xl-4"><p class="mb-0">Production deployments with Docker, AWS, Nginx, CI/CD pipelines for zero-downtime releases.</p></div>
+                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>AWS (EC2, S3, RDS)</p><p><i class="fa fa-check me-2"></i>Docker / Nginx</p><p class="mb-0"><i class="fa fa-check me-2"></i>CI/CD Pipelines</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education -->
         <div class="container-fluid">
             <div class="container">
                 <div class="row g-0">
@@ -174,21 +758,17 @@
                                     <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
                                         <div class="d-flex align-items-center mb-3">
                                             <p class="fs-5 mb-0 me-4">Shaheed Bhagat Singh State University</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> 2016 - 2020
-                                            </div>
+                                            <div><span class="fa fa-calendar me-1"></span> 2016 - 2020</div>
                                         </div>
                                         <h4 class="mb-3">B.Tech in Computer Science</h4>
-                                        <p class="mb-0">Built strong foundations in software development, algorithms, data structures, databases, and web technologies through academic projects and team collaborations.</p>
+                                        <p class="mb-0">Foundations in software engineering, algorithms, data structures, databases, and web technologies.</p>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Professional Certifications</p>
-                                        </div>
+                                        <div class="d-flex align-items-center mb-3"><p class="fs-5 mb-0 me-4">Professional Certifications</p></div>
                                         <h4 class="mb-3">Data Science with Python | Django Developer | PostgreSQL &amp; Window Functions</h4>
-                                        <p class="mb-0">Completed professional certifications covering data science, machine learning, Django backend development, and advanced PostgreSQL operations. Applied learnings to production systems and real-world projects.</p>
+                                        <p class="mb-0">Applied professional training in data science, ML, advanced Django, and PostgreSQL to production systems.</p>
                                     </div>
                                 </div>
                             </div>
@@ -197,612 +777,15 @@
                 </div>
             </div>
         </div>
-        <!-- Education End -->
 
-        <!-- Experience Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Experience</p>
-                                <h1 class="display-6 text-white mb-0">4+ Years of Professional Experience</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="experience-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-
-                                <!-- Role 1: RTC -->
-                                <div class="col-12">
-                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">RTC Knowledge Services Pvt Ltd</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> Nov 2025 – Present
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">Senior Backend Developer &amp; AI Integration Lead</h4>
-                                        <p class="mb-0">
-                                            <ul>
-                                                <li>Building production-grade GenAI backends using LangChain and RAG architecture, optimizing embedding pipelines and vector search for improved LLM response accuracy.</li>
-                                                <li>Designing and maintaining RESTful APIs using Django REST Framework with JWT authentication, input validation, and structured error handling.</li>
-                                                <li>Mentoring 3 junior developers on backend design patterns, code review practices, and Django conventions.</li>
-                                                <li>Collaborating with frontend and data science teams to define API contracts and translate business requirements into backend solutions.</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Role 2: Tech Prastish -->
-                                <div class="col-12">
-                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Tech Prastish Software Solutions Pvt. Ltd.</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> Aug 2022 – Sep 2025
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">Backend Developer</h4>
-                                        <p class="mb-0">
-                                            <ul>
-                                                <li>Designed and maintained backend systems using Django for real-time data synchronization across 5+ microservices, handling 30,000+ daily requests with 99.5% uptime.</li>
-                                                <li>Built RAG-based document Q&amp;A backends using LangChain and vector databases (FAISS/ChromaDB), significantly reducing LLM hallucinations in production.</li>
-                                                <li>Developed end-to-end ML model-serving pipelines including data preprocessing, feature engineering, and inference APIs for 3 production use cases.</li>
-                                                <li>Optimized database queries through indexing and query plan analysis, reducing average execution times by 20%.</li>
-                                                <li>Implemented rate limiting, connection pooling, and exception handling strategies that improved API reliability.</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <!-- Role 3: Baseline IT -->
-                                <div class="col-12">
-                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Baseline IT Development – Mohali, India</p>
-                                            <div>
-                                                <span class="fa fa-calendar me-1"></span> Jan 2021 – Jul 2022
-                                            </div>
-                                        </div>
-                                        <h4 class="mb-3">Python / Django Developer</h4>
-                                        <p class="mb-0">
-                                            <ul>
-                                                <li>Developed and maintained Django-based backend systems supporting 50,000+ daily API requests with efficient connection pooling.</li>
-                                                <li>Built secure RESTful APIs with authentication, input validation, and structured error handling, reducing production error rates by 35%.</li>
-                                                <li>Integrated third-party services including payment gateways and notification systems with complex database operations.</li>
-                                                <li>Established code quality standards through unit testing, debugging workflows, and peer code review processes.</li>
-                                            </ul>
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Experience End -->
-
-
-        <!-- Skills Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Skills</p>
-                                <h1 class="display-6 text-white mb-0">Technical Expertise</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="skills-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-python fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">PYTHON</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.2s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-python fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">DJANGO / DRF</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="text-primary text-center mb-3"><span class="fas fa-database fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">PostgreSQL / MySQL</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.4s">
-                                        <div class="text-primary text-center mb-3"><span class="fas fa-bolt fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">REDIS / CELERY</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="text-primary text-center mb-3"><span class="fas fa-robot fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">LANGCHAIN / RAG</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.6s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-aws fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">AWS / DOCKER</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.7s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-js-square fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">JAVASCRIPT</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.8s">
-                                        <div class="text-primary text-center mb-3"><span class="fab fa-git-alt fa-3x"></span></div>
-                                        <div class="counter-counting d-flex justify-content-center">
-                                            <h6 class="display-10">GIT / CI/CD</h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Skills End -->
-
-
-        <!-- Portfolio Start -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Portfolio</p>
-                                <h1 class="display-6 text-white mb-0">My Recent Works</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
-
-                            <!-- Project 1: Learnify -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Full-Stack AI Platform (Django / OpenAI / MySQL)</h4>
-                                        <h1 class="display-6 mb-0">Learnify – Adaptive Learning Platform</h1>
-                                        <p>AI-powered adaptive learning platform supporting 4 major English proficiency exams (IELTS, TOEFL, PTE, Duolingo) with 8 intelligent test modules.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🤖 Integrated GPT-4, Whisper, DALL·E &amp; Edge TTS APIs for AI-driven assessments</li>
-                                            <li class="mb-2">🎤 Real-time speech evaluation and automated grading systems</li>
-                                            <li class="mb-2">📊 Progress tracking with analytics dashboards</li>
-                                            <li class="mb-2">🚀 Deployed on Ubuntu VPS with Nginx &amp; automated CI/CD pipelines</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Learnify Platform">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 2: GenAI Document Chatbot -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.2s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">GenAI Backend (LangChain / FAISS / ChromaDB)</h4>
-                                        <h1 class="display-6 mb-0">GenAI Document Chatbot</h1>
-                                        <p>Scalable RAG-based document Q&amp;A backend that allows users to chat with their documents using AI.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🧠 Built with LangChain, embeddings &amp; vector databases (FAISS/ChromaDB)</li>
-                                            <li class="mb-2">📄 Context-aware responses with reduced LLM hallucinations</li>
-                                            <li class="mb-2">⚡ Optimized embedding pipelines for fast similarity search</li>
-                                            <li class="mb-2">🔗 LLM orchestration for accurate, grounded answers</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="GenAI Chatbot">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 3: AI-Powered VISA Interview Prep -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.25s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">AI Backend (Django / OpenAI GPT-4 / Whisper)</h4>
-                                        <h1 class="display-6 mb-0">AI VISA Interview Preparation System</h1>
-                                        <p>An intelligent VISA interview simulator that uses AI to conduct mock interviews, evaluate spoken responses in real-time, and provide personalized feedback to improve success rates.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🎙️ Real-time speech-to-text using OpenAI Whisper API for capturing candidate responses</li>
-                                            <li class="mb-2">🤖 GPT-4 powered dynamic question generation based on visa type (F1, B1/B2, H1B, Schengen)</li>
-                                            <li class="mb-2">📝 AI-driven response analysis scoring confidence, clarity, relevance &amp; completeness</li>
-                                            <li class="mb-2">📊 Detailed performance reports with improvement suggestions after each mock session</li>
-                                            <li class="mb-2">🔄 Adaptive difficulty — questions adjust based on candidate's past performance</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="VISA Interview AI System">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 4: Customer Churn Prediction API -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">ML Pipeline (Scikit-learn / XGBoost / Django REST)</h4>
-                                        <h1 class="display-6 mb-0">Customer Churn Prediction API</h1>
-                                        <p>End-to-end machine learning pipeline with a production-ready model-serving API for telecom customer churn prediction. Helps businesses proactively identify at-risk customers and take retention actions.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">📈 Trained and compared Logistic Regression, Random Forest &amp; XGBoost models</li>
-                                            <li class="mb-2">🎯 Achieved 92% ROC-AUC with optimized hyperparameters using GridSearchCV</li>
-                                            <li class="mb-2">🔧 Feature engineering pipeline with automated data preprocessing &amp; encoding</li>
-                                            <li class="mb-2">🚀 REST API endpoint for real-time churn predictions with confidence scores</li>
-                                            <li class="mb-2">📊 Built interactive dashboard showing churn risk segments &amp; key drivers</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Churn Prediction API">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 5: Credit Card Fraud Detection -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.35s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Anomaly Detection (XGBoost / SMOTE / Isolation Forest)</h4>
-                                        <h1 class="display-6 mb-0">Credit Card Fraud Detection Service</h1>
-                                        <p>Real-time fraud detection microservice built on highly imbalanced transaction data. Identifies fraudulent credit card transactions with high precision while minimizing false positives for legitimate users.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🔍 Handled extreme class imbalance (99.8% legitimate vs 0.2% fraud) using SMOTE oversampling</li>
-                                            <li class="mb-2">🌲 Ensemble approach combining XGBoost &amp; Isolation Forest for robust anomaly detection</li>
-                                            <li class="mb-2">🎯 Achieved 95%+ recall with optimized threshold tuning — minimizing missed fraud cases</li>
-                                            <li class="mb-2">⚡ Low-latency inference API for real-time transaction screening</li>
-                                            <li class="mb-2">📉 Precision-recall tradeoff analysis with custom business cost function</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Fraud Detection Service">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 6: AI SOP Writer & Analyzer -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">GenAI Application (Django / GPT-4 / Prompt Engineering)</h4>
-                                        <h1 class="display-6 mb-0">AI SOP Writer &amp; Analyzer</h1>
-                                        <p>An intelligent Statement of Purpose (SOP) generation and analysis tool that helps students craft compelling SOPs for university admissions using AI-powered writing assistance and expert-level feedback.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">✍️ GPT-4 powered SOP generation with university-specific customization</li>
-                                            <li class="mb-2">🔎 AI content analysis scoring structure, coherence, grammar &amp; persuasiveness</li>
-                                            <li class="mb-2">📝 Section-by-section improvement suggestions with rewrite options</li>
-                                            <li class="mb-2">🎓 Tailored for different programs — MS, MBA, PhD with field-specific prompting</li>
-                                            <li class="mb-2">🔄 Version history &amp; comparison to track SOP improvement over iterations</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="AI SOP Writer">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 7: EasyClean -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Mobile Backend (Django / Flutter)</h4>
-                                        <h1 class="display-6 mb-0">EasyClean – On-Demand Laundry Service</h1>
-                                        <p><strong>EasyClean</strong> is an on-demand dry cleaning and laundry service app. We collect, clean, and deliver your clothes whenever and wherever you want.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2"><i class="fas fa-store text-primary me-2"></i> Wide network of laundry partners across all areas</li>
-                                            <li class="mb-2"><i class="fas fa-shipping-fast text-success me-2"></i> Real-time driver tracking for pickup and delivery</li>
-                                            <li class="mb-2"><i class="fas fa-calendar-check text-warning me-2"></i> Seamless scheduling and doorstep service</li>
-                                        </ul>
-                                        <p><a href="https://play.google.com/store/apps/details?id=com.easyclean.laundryowner" target="_blank">🚀 Visit on Google Play</a></p>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <div class="scroll-gallery">
-                                                    <div class="image-box"><img src="img/Screenshot1.png" alt="EasyClean Screenshot 1"></div>
-                                                    <div class="image-box"><img src="img/project2.png" alt="EasyClean Screenshot 2"></div>
-                                                    <div class="image-box"><img src="img/project4.png" alt="EasyClean Screenshot 3"></div>
-                                                    <div class="image-box"><img src="img/project5.png" alt="EasyClean Screenshot 4"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 8: Aap Ka Bazar -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.4s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Mobile Backend (Django / Flutter)</h4>
-                                        <h1 class="display-6 mb-0">Aap Ka Bazar – Online Grocery Store</h1>
-                                        <p><strong>Aap Ka Bazar</strong> is India's fastest-growing online grocery platform, trusted by customers. With 10,000+ products from thousands of brands, it delivers daily essentials right to your doorstep.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🥦 Wide selection of groceries and household essentials</li>
-                                            <li class="mb-2">🚚 Daily doorstep delivery</li>
-                                            <li class="mb-2">💰 Best prices with quality assurance</li>
-                                            <li class="mb-2">📱 Easy-to-use mobile app</li>
-                                        </ul>
-                                        <p><a href="https://play.google.com/store/apps/details?id=co.aapkabazar.app&pcampaignid=web_share" target="_blank">🚀 Visit on Google Play</a></p>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <div class="scroll-gallery">
-                                                    <div class="image-box"><img src="img/p1.png" alt="Aap Ka Bazar Screenshot 1"></div>
-                                                    <div class="image-box"><img src="img/p2.png" alt="Aap Ka Bazar Screenshot 2"></div>
-                                                    <div class="image-box"><img src="img/p3.png" alt="Aap Ka Bazar Screenshot 3"></div>
-                                                    <div class="image-box"><img src="img/p4.png" alt="Aap Ka Bazar Screenshot 4"></div>
-                                                    <div class="image-box"><img src="img/p5.png" alt="Aap Ka Bazar Screenshot 5"></div>
-                                                    <div class="image-box"><img src="img/p6.png" alt="Aap Ka Bazar Screenshot 6"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 9: Musika Lessons -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.5s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Web Development (Django Backend)</h4>
-                                        <h1 class="display-6 mb-0">Musika Lessons – Music Learning LMS</h1>
-                                        <p>Find expert music teachers for singing, piano, violin, guitar lessons and other musical instruments. Servicing 3000+ cities worldwide.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🌍 Servicing 3000+ cities including New York, Chicago, LA, and Washington</li>
-                                            <li class="mb-2">🎹 Wide range of lessons: vocals, piano, guitar, violin, and more</li>
-                                            <li class="mb-2">👨‍🏫 Access to verified, expert music teachers</li>
-                                            <li class="mb-2">📅 Easy scheduling and lesson management</li>
-                                        </ul>
-                                        🚀 <a href="https://www.musikalessons.com/">Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Musika Lessons">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 10: MyCar -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Web Development (Backend &amp; E-Commerce)</h4>
-                                        <h1 class="display-6 mb-0">MyCar – Car Accessories E-Commerce</h1>
-                                        <p>Online store for car accessories based in Thessaloniki, Greece. Redesigned the website for a faster, safer, and more user-friendly shopping experience.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🛠️ Complete website redesign with modern UI/UX</li>
-                                            <li class="mb-2">⚡ Improved speed and performance</li>
-                                            <li class="mb-2">🔒 Enhanced security for safe online transactions</li>
-                                            <li class="mb-2">📱 Mobile-friendly and responsive design</li>
-                                        </ul>
-                                        🚀 <a href="https://mycar.gr/">Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section" style="margin-bottom: 152px;">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <iframe src="https://mycar.gr" width="100%" height="300px" style="border:1px solid #ccc;" title="MyCar.gr Website" loading="lazy" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Project 11: Home Royale -->
-                            <div class="portfolio-item py-5 wow fadeInUp" data-wow-delay="0.7s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <h4 class="text-body">Web Development (Backend &amp; E-Commerce)</h4>
-                                        <h1 class="display-6 mb-0">Home Royale – Premium Kitchenware E-Commerce</h1>
-                                        <p>Developed a responsive e-commerce website for Home Royale, showcasing premium global kitchenware brands with secure shopping and optimized performance.</p>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">🛒 Seamless e-commerce integration with secure checkout</li>
-                                            <li class="mb-2">🎨 Clean and modern UI/UX design</li>
-                                            <li class="mb-2">⚡ Optimized for speed and performance</li>
-                                            <li class="mb-2">📱 Fully responsive and mobile-friendly</li>
-                                        </ul>
-                                        🚀 <a href="https://homeroyale.com.au/">Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img">
-                                            <div class="portfolio-img-inner">
-                                                <iframe src="https://homeroyale.com.au/" width="100%" height="300px" style="border:1px solid #ccc;" title="Home Royale Website" loading="lazy" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio End -->
-
-        <!-- Service Start -->
-        <div class="container-fluid" id="pigraService">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">My Services</p>
-                                <h1 class="display-6 text-white mb-0">What I Do For You</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="service-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-
-                                <!-- Backend Development -->
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-server fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Backend Development</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">I architect secure, scalable RESTful APIs, microservices, and server-side solutions to power web and mobile applications at scale.</p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> Python (Django / DRF)</p>
-                                                <p><i class="fa fa-check me-2"></i> PostgreSQL / MySQL / Redis</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Celery / Task Queues</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- AI/GenAI Integration -->
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-robot fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">AI &amp; GenAI Integration</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">I build production-grade AI backends with RAG pipelines, LLM orchestration, and intelligent document processing systems.</p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> LangChain / RAG</p>
-                                                <p><i class="fa fa-check me-2"></i> OpenAI / GPT-4 / Whisper</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> FAISS / ChromaDB</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Web Development -->
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-laptop-code fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Web &amp; API Development</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">I create responsive, high-performance web applications with robust backends, API design, and cloud deployments.</p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> Full-Stack Web Apps</p>
-                                                <p><i class="fa fa-check me-2"></i> AWS / Docker / Nginx</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> CI/CD Pipelines</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Mobile Backend -->
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.7s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2">
-                                                <i class="fas fa-mobile-alt fa-3x"></i>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <a href="#" class="h4 mb-0">Mobile App Backend</a>
-                                            </div>
-                                            <div class="col-xl-4">
-                                                <p class="mb-0">I design and build scalable backend systems for mobile applications with real-time APIs, push notifications, and database integration.</p>
-                                            </div>
-                                            <div class="col-xl-3">
-                                                <p><i class="fa fa-check me-2"></i> Django REST APIs for Mobile</p>
-                                                <p><i class="fa fa-check me-2"></i> Real-time Data Sync</p>
-                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Flutter Backend Support</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Service End -->
-
-
-        <!-- Contact Start -->
+        <!-- Contact -->
         <div class="container-fluid" id="pigraContact">
             <div class="container">
                 <div class="row g-0">
                     <div class="col-lg-3">
                         <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
                             <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Contact Me</p>
+                                <p class="text-white sub-title">Contact</p>
                                 <h1 class="display-6 text-white mb-0">Let's Build Something Together</h1>
                             </div>
                         </div>
@@ -811,33 +794,35 @@
                         <div class="contact-content h-100 pt-6 ps-6 pb-6">
                             <div class="bg-light p-4">
                                 <div class="row g-5">
-                                    <div class="col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
-                                        <p class="mb-4">I'm always open to discussing new projects, backend architecture challenges, or AI integration opportunities. Let's connect!</p>
+                                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
+                                        <h4 class="mb-3">Ready to Discuss Your Project?</h4>
+                                        <p class="mb-4">Whether you need a scalable backend, AI/GenAI integration, or ML-powered features — I'm ready to help architect and build it.</p>
                                         <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                            </div>
-                                            <div>
-                                                <h4>Location</h4>
-                                                <p class="mb-0">Noida, India</p>
-                                            </div>
+                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fas fa-envelope"></i></div>
+                                            <div><h5 class="mb-1">Email</h5><p class="mb-0"><a href="mailto:neha99iu@gmail.com" class="text-decoration-none">neha99iu@gmail.com</a></p></div>
                                         </div>
                                         <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fas fa-envelope"></i>
-                                            </div>
-                                            <div>
-                                                <h4>Email</h4>
-                                                <p class="mb-0"><a href="/cdn-cgi/l/email-protection#c0aea5a8a1f9f9a9b580a7ada1a9aceea3afad" class="text-decoration-none"><span class="__cf_email__" data-cfemail="79171c11184040100c391e14181015571a1614">[email&#160;protected]</span></a></p>
-                                            </div>
+                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fas fa-map-marker-alt"></i></div>
+                                            <div><h5 class="mb-1">Location</h5><p class="mb-0">Noida, India</p></div>
                                         </div>
                                         <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3">
-                                                <i class="fab fa-linkedin-in"></i>
-                                            </div>
-                                            <div>
-                                                <h4>LinkedIn</h4>
-                                                <p class="mb-0"><a href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" class="text-decoration-none">linkedin.com/in/neha-jaiswal</a></p>
+                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fab fa-linkedin-in"></i></div>
+                                            <div><h5 class="mb-1">LinkedIn</h5><p class="mb-0"><a href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" class="text-decoration-none">linkedin.com/in/neha-jaiswal</a></p></div>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fab fa-github"></i></div>
+                                            <div><h5 class="mb-1">GitHub</h5><p class="mb-0"><a href="https://github.com/neha-5456" class="text-decoration-none">github.com/neha-5456</a></p></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="cta-banner" style="border-radius:12px;padding:30px;">
+                                            <h4 style="color:#fff;">Quick Facts</h4>
+                                            <div style="text-align:left;color:rgba(255,255,255,0.9);font-size:15px;">
+                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Available for full-time opportunities</p>
+                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Open to remote &amp; hybrid roles</p>
+                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> 4+ years production experience</p>
+                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Backend + AI/ML dual expertise</p>
+                                                <p class="mb-0"><i class="fas fa-check-circle me-2"></i> Immediate availability</p>
                                             </div>
                                         </div>
                                     </div>
@@ -848,10 +833,8 @@
                 </div>
             </div>
         </div>
-        <!-- Contact End -->
 
-
-        <!-- Footer Start -->
+        <!-- Footer -->
         <div class="container-fluid footer bg-dark border-bottom-0">
             <div class="container wow fadeIn" data-wow-delay="0.1s">
                 <div class="row g-0">
@@ -875,13 +858,17 @@
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
 
-
-        <!-- Back to Top -->
         <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
 
-
-        <!-- JavaScript Libraries -->
-        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/j
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
