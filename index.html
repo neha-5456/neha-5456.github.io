@@ -1,875 +1,822 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Neha Jaiswal - Senior Backend Developer | Python & Django Architect</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Senior Backend Developer, Python, Django, REST API, AI Integration, LangChain, RAG, GenAI, Microservices, OpenAI" name="keywords">
-        <meta content="Senior Backend Developer with 4+ years building scalable APIs, GenAI pipelines, and ML-powered backends using Python, Django, LangChain." name="description">
+<head>
+    <meta charset="utf-8">
+    <title>Neha Jaiswal — Senior Backend Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senior Backend Developer with 4+ years building scalable APIs, GenAI pipelines, and ML-powered backends.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <style>
+        :root {
+            --bg: #0a0a0f;
+            --bg-card: #12121a;
+            --bg-elevated: #1a1a26;
+            --accent: #f0c040;
+            --accent-dim: #f0c04030;
+            --accent-glow: #f0c04015;
+            --text: #e8e8ec;
+            --text-dim: #8888a0;
+            --text-muted: #55556a;
+            --border: #2a2a3a;
+            --green: #34d399;
+            --red: #f87171;
+            --blue: #60a5fa;
+            --purple: #a78bfa;
+            --cyan: #22d3ee;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+        }
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
-        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/style.css" rel="stylesheet">
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:var(--font-body); background:var(--bg); color:var(--text); line-height:1.7; overflow-x:hidden; }
+        body::before { content:''; position:fixed; top:0; left:0; width:100%; height:100%; background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E"); pointer-events:none; z-index:0; }
 
-        <style>
-            /* ===== TECH BADGES ===== */
-            .tech-badge { display:inline-block; padding:4px 12px; margin:3px 4px; border-radius:20px; font-size:12px; font-weight:600; letter-spacing:0.3px; }
-            .badge-python { background:#3776AB22; color:#3776AB; border:1px solid #3776AB44; }
-            .badge-django { background:#092E2022; color:#092E20; border:1px solid #092E2044; }
-            .badge-ai { background:#7C3AED22; color:#7C3AED; border:1px solid #7C3AED44; }
-            .badge-db { background:#33669922; color:#336699; border:1px solid #33669944; }
-            .badge-devops { background:#FF990022; color:#CC7A00; border:1px solid #FF990044; }
-            .badge-ml { background:#E9437222; color:#E94372; border:1px solid #E9437244; }
-            .badge-api { background:#10B98122; color:#0D9668; border:1px solid #10B98144; }
-            .badge-cloud { background:#FF630022; color:#E55A00; border:1px solid #FF630044; }
+        ::selection { background:var(--accent); color:var(--bg); }
 
-            /* ===== TYPING ANIMATION ===== */
-            .typing-text { border-right:3px solid #667eea; white-space:nowrap; overflow:hidden; animation:typing 3.5s steps(40) 1s forwards, blink 0.75s step-end infinite; max-width:0; display:inline-block; vertical-align:bottom; }
-            @keyframes typing { from{max-width:0} to{max-width:100%} }
-            @keyframes blink { 50%{border-color:transparent} }
+        /* ===== LAYOUT ===== */
+        .container { max-width:1200px; margin:0 auto; padding:0 24px; position:relative; z-index:1; }
+        section { padding:100px 0; position:relative; }
+        section + section { border-top:1px solid var(--border); }
 
-            /* ===== IMPACT NUMBERS ===== */
-            .impact-number { font-size:2.8rem; font-weight:800; line-height:1; background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
-            .impact-label { font-size:0.85rem; color:#666; font-weight:500; margin-top:6px; }
-            .impact-card { text-align:center; padding:25px 15px; border-radius:12px; background:#fff; box-shadow:0 2px 15px rgba(0,0,0,0.06); transition:transform 0.3s,box-shadow 0.3s; }
-            .impact-card:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.12); }
+        /* ===== TYPOGRAPHY ===== */
+        h1,h2,h3,h4,h5 { font-family:var(--font-display); font-weight:700; color:var(--text); letter-spacing:-0.02em; }
+        .section-label { font-family:var(--font-mono); font-size:0.75rem; font-weight:600; text-transform:uppercase; letter-spacing:3px; color:var(--accent); margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+        .section-label::before { content:''; width:24px; height:1px; background:var(--accent); }
+        .section-title { font-size:clamp(2rem,5vw,3.2rem); font-weight:800; line-height:1.1; margin-bottom:24px; }
+        .gradient-text { background:linear-gradient(135deg,var(--accent),#ff8c42,var(--accent)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+        p { color:var(--text-dim); font-size:1rem; }
+        a { color:var(--accent); text-decoration:none; transition:all 0.3s; }
 
-            /* ===== ARCHITECTURE BOXES ===== */
-            .arch-box { background:#1a1a2e; color:#e0e0e0; border-radius:10px; padding:18px 22px; font-family:'Courier New',monospace; font-size:13px; line-height:1.7; margin:15px 0; border-left:3px solid #667eea; overflow-x:auto; }
-            .arch-box .arch-arrow { color:#667eea; font-weight:bold; }
-            .arch-box .arch-component { color:#7ee8fa; }
-            .arch-box .arch-label { color:#98d8c8; font-style:italic; }
+        /* ===== NAV ===== */
+        nav { position:fixed; top:0; width:100%; z-index:100; padding:20px 0; transition:all 0.4s; }
+        nav.scrolled { background:rgba(10,10,15,0.9); backdrop-filter:blur(20px); border-bottom:1px solid var(--border); padding:12px 0; }
+        .nav-inner { display:flex; justify-content:space-between; align-items:center; }
+        .nav-logo { font-family:var(--font-display); font-size:1.3rem; font-weight:800; color:var(--text); }
+        .nav-logo span { color:var(--accent); }
+        .nav-links { display:flex; gap:32px; list-style:none; }
+        .nav-links a { font-family:var(--font-mono); font-size:0.8rem; color:var(--text-dim); text-transform:uppercase; letter-spacing:1.5px; position:relative; padding:4px 0; }
+        .nav-links a::after { content:''; position:absolute; bottom:0; left:0; width:0; height:2px; background:var(--accent); transition:width 0.3s; }
+        .nav-links a:hover { color:var(--text); }
+        .nav-links a:hover::after { width:100%; }
 
-            /* ===== WHY HIRE ME ===== */
-            .why-card { border:none; border-radius:16px; padding:32px 28px; height:100%; transition:all 0.3s; position:relative; overflow:hidden; background:#fff; box-shadow:0 4px 20px rgba(0,0,0,0.05); }
-            .why-card::after { content:''; position:absolute; bottom:0; left:0; width:100%; height:4px; background:linear-gradient(90deg,#667eea,#764ba2); transform:scaleX(0); transition:transform 0.3s; transform-origin:left; }
-            .why-card:hover { transform:translateY(-8px); box-shadow:0 12px 35px rgba(102,126,234,0.15); }
-            .why-card:hover::after { transform:scaleX(1); }
-            .why-icon { width:60px; height:60px; border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:24px; margin-bottom:18px; }
-            .why-icon-arch { background:linear-gradient(135deg,#092E2015,#092E2025); color:#092E20; }
-            .why-icon-ai { background:linear-gradient(135deg,#7C3AED15,#7C3AED25); color:#7C3AED; }
-            .why-icon-perf { background:linear-gradient(135deg,#10B98115,#10B98125); color:#0D9668; }
-            .why-icon-team { background:linear-gradient(135deg,#E5870015,#E5870025); color:#CC7A00; }
+        /* ===== HERO ===== */
+        #hero { min-height:100vh; display:flex; align-items:center; padding-top:80px; position:relative; overflow:hidden; }
+        .hero-glow { position:absolute; width:600px; height:600px; border-radius:50%; filter:blur(120px); opacity:0.08; pointer-events:none; }
+        .hero-glow-1 { background:var(--accent); top:-200px; right:-100px; }
+        .hero-glow-2 { background:#ff6b35; bottom:-200px; left:-100px; }
+        .hero-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+        .hero-tag { display:inline-flex; align-items:center; gap:8px; padding:6px 16px; border:1px solid var(--border); border-radius:100px; font-family:var(--font-mono); font-size:0.75rem; color:var(--accent); margin-bottom:24px; background:var(--accent-glow); }
+        .hero-tag .dot { width:6px; height:6px; border-radius:50%; background:var(--green); animation:pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+        .hero-title { font-size:clamp(2.5rem,6vw,4rem); font-weight:800; line-height:1.05; margin-bottom:20px; }
+        .hero-desc { font-size:1.15rem; color:var(--text-dim); max-width:520px; margin-bottom:32px; line-height:1.8; }
+        .hero-badges { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:32px; }
+        .badge { padding:5px 14px; border-radius:6px; font-family:var(--font-mono); font-size:0.72rem; font-weight:600; border:1px solid var(--border); background:var(--bg-card); color:var(--text-dim); transition:all 0.3s; }
+        .badge:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
+        .badge-accent { border-color:var(--accent-dim); color:var(--accent); background:var(--accent-glow); }
+        .hero-cta { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:28px; }
+        .btn-primary { padding:14px 32px; background:var(--accent); color:var(--bg); font-family:var(--font-display); font-weight:700; font-size:0.95rem; border:none; border-radius:8px; cursor:pointer; transition:all 0.3s; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+        .btn-primary:hover { transform:translateY(-3px); box-shadow:0 12px 40px rgba(240,192,64,0.25); }
+        .btn-outline { padding:14px 32px; background:transparent; color:var(--text); font-family:var(--font-display); font-weight:700; font-size:0.95rem; border:1px solid var(--border); border-radius:8px; cursor:pointer; transition:all 0.3s; text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+        .btn-outline:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-3px); }
+        .hero-socials { display:flex; gap:12px; }
+        .social-btn { width:42px; height:42px; display:flex; align-items:center; justify-content:center; border:1px solid var(--border); border-radius:10px; color:var(--text-dim); transition:all 0.3s; font-size:16px; }
+        .social-btn:hover { border-color:var(--accent); color:var(--accent); transform:translateY(-3px); background:var(--accent-glow); }
+        .hero-photo { position:relative; }
+        .hero-photo-frame { width:100%; max-width:420px; aspect-ratio:3/4; border-radius:20px; overflow:hidden; position:relative; border:2px solid var(--border); margin-left:auto; }
+        .hero-photo-frame img { width:100%; height:100%; object-fit:cover; }
+        .hero-photo-frame::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,transparent 60%,var(--bg)); }
+        .hero-float-card { position:absolute; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:14px 18px; backdrop-filter:blur(10px); }
+        .hero-float-card.card-1 { bottom:80px; left:-30px; }
+        .hero-float-card.card-2 { top:40px; right:-20px; }
+        .float-label { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; }
+        .float-value { font-family:var(--font-display); font-size:1.4rem; font-weight:800; color:var(--accent); }
 
-            /* ===== CAREER TIMELINE ===== */
-            .timeline-item { position:relative; padding-left:40px; padding-bottom:35px; border-left:2px solid #e0e0e0; }
-            .timeline-item:last-child { border-left:2px solid transparent; padding-bottom:0; }
-            .timeline-item::before { content:''; position:absolute; left:-8px; top:4px; width:14px; height:14px; border-radius:50%; background:#667eea; border:3px solid #fff; box-shadow:0 0 0 2px #667eea; }
-            .timeline-item.current::before { background:#10B981; box-shadow:0 0 0 2px #10B981; animation:pulse-dot 2s infinite; }
-            @keyframes pulse-dot { 0%,100%{box-shadow:0 0 0 2px #10B981} 50%{box-shadow:0 0 0 6px #10B98140} }
-            .timeline-role { font-size:1.1rem; font-weight:700; color:#1a1a2e; margin-bottom:2px; }
-            .timeline-company { font-size:0.95rem; color:#667eea; font-weight:600; }
-            .timeline-date { font-size:0.8rem; color:#999; font-weight:500; text-transform:uppercase; letter-spacing:1px; }
-            .timeline-highlight { display:inline-block; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; margin:4px 4px 0 0; }
-            .tl-green { background:#10B98118; color:#0D9668; }
-            .tl-purple { background:#7C3AED18; color:#7C3AED; }
-            .tl-blue { background:#3776AB18; color:#3776AB; }
+        /* ===== STATS ===== */
+        .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+        .stat-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:32px 24px; text-align:center; transition:all 0.4s; position:relative; overflow:hidden; }
+        .stat-card::before { content:''; position:absolute; top:0; left:50%; transform:translateX(-50%); width:60px; height:3px; background:var(--accent); border-radius:0 0 3px 3px; opacity:0; transition:opacity 0.3s; }
+        .stat-card:hover { transform:translateY(-6px); border-color:var(--accent-dim); }
+        .stat-card:hover::before { opacity:1; }
+        .stat-num { font-family:var(--font-display); font-size:2.6rem; font-weight:800; color:var(--text); line-height:1; }
+        .stat-num span { color:var(--accent); }
+        .stat-label { font-size:0.85rem; color:var(--text-muted); margin-top:8px; }
 
-            /* ===== PROJECT TAGS ===== */
-            .project-type-tag { display:inline-block; padding:3px 10px; border-radius:4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:1px; margin-bottom:8px; }
-            .tag-ai { background:#7C3AED18; color:#7C3AED; }
-            .tag-ml { background:#E9437218; color:#E94372; }
-            .tag-backend { background:#092E2018; color:#092E20; }
-            .tag-fullstack { background:#10B98118; color:#0D9668; }
+        /* ===== WHY HIRE ===== */
+        .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; }
+        .why-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:36px; transition:all 0.4s; position:relative; overflow:hidden; }
+        .why-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--accent),#ff8c42); transform:scaleX(0); transition:transform 0.4s; transform-origin:left; }
+        .why-card:hover { border-color:var(--accent-dim); transform:translateY(-5px); }
+        .why-card:hover::after { transform:scaleX(1); }
+        .why-icon { width:52px; height:52px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:20px; background:var(--accent-glow); color:var(--accent); border:1px solid var(--accent-dim); }
+        .why-card h4 { font-size:1.15rem; margin-bottom:10px; }
+        .why-card p { font-size:0.9rem; line-height:1.7; }
 
-            /* ===== PROJECT IMPACT BAR ===== */
-            .project-impact { background:#f8f9fc; border-radius:8px; padding:12px 16px; margin:12px 0; display:flex; gap:20px; flex-wrap:wrap; }
-            .project-impact-item { display:flex; align-items:center; gap:6px; font-size:13px; }
-            .project-impact-item strong { color:#667eea; }
+        /* ===== TIMELINE ===== */
+        .timeline { position:relative; padding-left:48px; }
+        .timeline::before { content:''; position:absolute; left:18px; top:0; bottom:0; width:2px; background:linear-gradient(180deg,var(--accent),var(--border)); }
+        .tl-item { position:relative; margin-bottom:40px; }
+        .tl-item:last-child { margin-bottom:0; }
+        .tl-dot { position:absolute; left:-40px; top:6px; width:14px; height:14px; border-radius:50%; background:var(--bg); border:3px solid var(--accent); }
+        .tl-item.current .tl-dot { background:var(--accent); box-shadow:0 0 15px var(--accent-dim); animation:tl-pulse 2s infinite; }
+        @keyframes tl-pulse { 0%,100%{box-shadow:0 0 5px var(--accent-dim)} 50%{box-shadow:0 0 20px var(--accent-dim)} }
+        .tl-date { font-family:var(--font-mono); font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:1.5px; }
+        .tl-role { font-family:var(--font-display); font-size:1.15rem; font-weight:700; color:var(--text); margin:4px 0 2px; }
+        .tl-company { font-size:0.95rem; color:var(--accent); font-weight:600; }
+        .tl-tags { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
+        .tl-tag { padding:2px 10px; border-radius:4px; font-size:0.7rem; font-weight:600; font-family:var(--font-mono); }
+        .tl-tag-gold { background:var(--accent-glow); color:var(--accent); border:1px solid var(--accent-dim); }
+        .tl-tag-green { background:#34d39915; color:var(--green); border:1px solid #34d39930; }
+        .tl-tag-blue { background:#60a5fa15; color:var(--blue); border:1px solid #60a5fa30; }
 
-            /* ===== LINKS ===== */
-            .live-link { display:inline-flex; align-items:center; gap:6px; padding:6px 14px; border-radius:6px; background:#10B981; color:#fff !important; font-size:13px; font-weight:600; text-decoration:none !important; transition:all 0.2s; }
-            .live-link:hover { background:#059669; transform:translateY(-1px); }
+        /* ===== TECH STACK ===== */
+        .stack-category { margin-bottom:16px; }
+        .stack-label { font-family:var(--font-mono); font-size:0.65rem; text-transform:uppercase; letter-spacing:2px; color:var(--text-muted); margin-bottom:8px; }
 
-            /* ===== CTA BANNER ===== */
-            .cta-banner { background:linear-gradient(135deg,#667eea 0%,#764ba2 100%); border-radius:16px; padding:40px; text-align:center; margin:20px 0; }
-            .cta-banner h3 { color:#fff; font-weight:700; margin-bottom:10px; }
-            .cta-banner p { color:rgba(255,255,255,0.85); margin-bottom:20px; }
-            .cta-btn { display:inline-block; padding:12px 30px; border-radius:8px; background:#fff; color:#667eea; font-weight:700; text-decoration:none; transition:all 0.2s; }
-            .cta-btn:hover { transform:translateY(-2px); box-shadow:0 8px 25px rgba(0,0,0,0.2); color:#764ba2; }
+        /* ===== PROJECTS ===== */
+        .project { padding:60px 0; border-bottom:1px solid var(--border); }
+        .project:last-child { border-bottom:none; }
+        .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+        .project-tag { display:inline-flex; padding:4px 12px; border-radius:4px; font-family:var(--font-mono); font-size:0.7rem; font-weight:600; letter-spacing:1px; text-transform:uppercase; margin-bottom:12px; }
+        .ptag-ai { background:#a78bfa15; color:var(--purple); border:1px solid #a78bfa30; }
+        .ptag-ml { background:#f8717115; color:var(--red); border:1px solid #f8717130; }
+        .ptag-backend { background:#34d39915; color:var(--green); border:1px solid #34d39930; }
+        .ptag-web { background:#60a5fa15; color:var(--blue); border:1px solid #60a5fa30; }
+        .project-name { font-size:clamp(1.6rem,3vw,2.2rem); font-weight:800; margin-bottom:6px; }
+        .project-sub { font-size:0.95rem; color:var(--accent); font-weight:600; margin-bottom:16px; }
 
-            /* ===== PROBLEM-SOLUTION FORMAT ===== */
-            .ps-row { display:flex; gap:12px; margin:10px 0; align-items:flex-start; }
-            .ps-label { min-width:75px; padding:3px 8px; border-radius:4px; font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; text-align:center; flex-shrink:0; margin-top:2px; }
-            .ps-problem { background:#FEE2E2; color:#DC2626; }
-            .ps-solution { background:#D1FAE5; color:#059669; }
-            .ps-impact { background:#E0E7FF; color:#4338CA; }
-            .ps-text { font-size:14px; color:#444; line-height:1.5; }
-        </style>
-    </head>
+        /* PSI rows */
+        .psi { display:flex; gap:12px; margin:10px 0; align-items:flex-start; }
+        .psi-label { min-width:72px; padding:4px 0; font-family:var(--font-mono); font-size:0.65rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; flex-shrink:0; }
+        .psi-problem { color:var(--red); }
+        .psi-solution { color:var(--green); }
+        .psi-impact { color:var(--accent); }
+        .psi-text { font-size:0.9rem; color:var(--text-dim); line-height:1.6; }
 
-    <body>
-        <!-- Spinner -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status"><span class="sr-only">Loading...</span></div>
+        /* Terminal box */
+        .terminal { background:#0d1117; border:1px solid #21262d; border-radius:12px; padding:20px 24px; font-family:var(--font-mono); font-size:0.78rem; line-height:1.8; margin:16px 0; overflow-x:auto; position:relative; }
+        .terminal::before { content:'● ● ●'; position:absolute; top:10px; left:14px; font-size:8px; letter-spacing:4px; color:#484f58; }
+        .terminal { padding-top:32px; }
+        .t-arrow { color:var(--accent); }
+        .t-comp { color:var(--cyan); }
+        .t-label { color:#7ee787; font-style:italic; }
+        .t-result { color:var(--accent); font-weight:700; }
+
+        .project-img { border-radius:16px; overflow:hidden; border:1px solid var(--border); position:relative; }
+        .project-img img { width:100%; display:block; transition:transform 0.5s; }
+        .project-img:hover img { transform:scale(1.03); }
+        .project-img iframe { width:100%; height:280px; border:none; display:block; }
+
+        .scroll-gallery { display:flex; overflow-x:auto; gap:12px; padding:10px 0; scroll-snap-type:x mandatory; }
+        .scroll-gallery::-webkit-scrollbar { height:4px; }
+        .scroll-gallery::-webkit-scrollbar-thumb { background:var(--accent); border-radius:2px; }
+        .scroll-gallery .sg-item { flex-shrink:0; width:160px; scroll-snap-align:start; border-radius:10px; overflow:hidden; border:1px solid var(--border); }
+        .scroll-gallery .sg-item img { width:100%; display:block; }
+
+        .live-btn { display:inline-flex; align-items:center; gap:8px; padding:8px 18px; border-radius:8px; background:var(--green); color:var(--bg); font-family:var(--font-mono); font-size:0.78rem; font-weight:700; margin-top:12px; transition:all 0.3s; }
+        .live-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(52,211,153,0.2); color:var(--bg); }
+
+        /* ===== CTA BANNER ===== */
+        .cta-section { background:linear-gradient(135deg,#1a1510,#15120f); border:1px solid var(--accent-dim); border-radius:20px; padding:60px; text-align:center; margin:40px 0; position:relative; overflow:hidden; }
+        .cta-section::before { content:''; position:absolute; top:-50%; left:-50%; width:200%; height:200%; background:radial-gradient(circle at 50% 50%,var(--accent-glow),transparent 50%); pointer-events:none; }
+        .cta-section h3 { font-size:1.8rem; margin-bottom:12px; }
+        .cta-section p { color:var(--text-dim); margin-bottom:24px; max-width:500px; margin-left:auto; margin-right:auto; }
+
+        /* ===== SERVICES ===== */
+        .services-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
+        .svc-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:32px; transition:all 0.3s; }
+        .svc-card:hover { border-color:var(--accent-dim); transform:translateY(-4px); }
+        .svc-icon { font-size:28px; color:var(--accent); margin-bottom:16px; }
+        .svc-card h4 { font-size:1.1rem; margin-bottom:8px; }
+        .svc-card p { font-size:0.88rem; margin-bottom:12px; }
+        .svc-list { list-style:none; padding:0; }
+        .svc-list li { font-family:var(--font-mono); font-size:0.75rem; color:var(--text-dim); padding:3px 0; }
+        .svc-list li::before { content:'→'; color:var(--accent); margin-right:8px; }
+
+        /* ===== CONTACT ===== */
+        .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; }
+        .contact-item { display:flex; gap:16px; margin-bottom:24px; }
+        .contact-icon { width:48px; height:48px; border-radius:12px; display:flex; align-items:center; justify-content:center; background:var(--accent-glow); border:1px solid var(--accent-dim); color:var(--accent); flex-shrink:0; }
+        .contact-item h5 { font-size:0.95rem; margin-bottom:2px; }
+        .contact-item p { font-size:0.9rem; }
+        .quick-facts { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:32px; }
+        .quick-facts h4 { font-size:1.1rem; margin-bottom:16px; color:var(--accent); }
+        .quick-facts p { font-size:0.9rem; margin-bottom:8px; display:flex; align-items:center; gap:10px; }
+        .quick-facts i { color:var(--accent); }
+
+        /* ===== FOOTER ===== */
+        footer { padding:40px 0; border-top:1px solid var(--border); text-align:center; }
+        footer p { font-size:0.85rem; color:var(--text-muted); }
+
+        /* ===== ANIMATION ===== */
+        .reveal { opacity:0; transform:translateY(40px); transition:opacity 0.7s ease,transform 0.7s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+        .reveal.d1{transition-delay:0.1s} .reveal.d2{transition-delay:0.2s} .reveal.d3{transition-delay:0.3s} .reveal.d4{transition-delay:0.4s}
+        .reveal.d5{transition-delay:0.5s} .reveal.d6{transition-delay:0.6s} .reveal.d7{transition-delay:0.7s} .reveal.d8{transition-delay:0.8s}
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:1024px) {
+            .hero-grid,.project-grid,.contact-grid { grid-template-columns:1fr; gap:40px; }
+            .hero-photo-frame { max-width:300px; margin:0 auto; }
+            .stats-grid { grid-template-columns:repeat(2,1fr); }
+            .nav-links { display:none; }
+        }
+        @media(max-width:640px) {
+            section { padding:60px 0; }
+            .stats-grid { grid-template-columns:repeat(2,1fr); gap:12px; }
+            .stat-card { padding:20px 16px; }
+            .stat-num { font-size:2rem; }
+            .why-grid,.services-grid { grid-template-columns:1fr; }
+            .hero-float-card { display:none; }
+            .psi { flex-direction:column; gap:4px; }
+            .psi-label { min-width:auto; }
+            .cta-section { padding:40px 24px; }
+            .terminal { font-size:0.68rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="mainNav">
+    <div class="container nav-inner">
+        <a href="#hero" class="nav-logo">Neha<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hero-socials">
+            <a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
         </div>
+    </div>
+</nav>
 
-        <!-- Navbar -->
-        <div class="container-fluid nav-section border-0">
-            <nav class="navbar navbar-light">
-                <div class="navbar-nav flex-column">
-                    <a href="#pigraHome" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
-                    <a href="#pigraAbout" class="nav-item nav-link"><span class="far fa-address-card"></span> About</a>
-                    <a href="#pigraService" class="nav-item nav-link"><span class="fab fa-servicestack"></span> Service</a>
-                    <a href="#pigraContact" class="nav-item nav-link"><span class="fas fa-address-book"></span> Contact</a>
-                </div>
-            </nav>
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="container hero-grid">
+        <div>
+            <div class="hero-tag reveal"><span class="dot"></span> Available for opportunities</div>
+            <h1 class="hero-title reveal d1">I Build<br><span class="gradient-text">Backends That Scale</span><br>&amp; AI That Ships</h1>
+            <p class="hero-desc reveal d2">Senior Backend Developer with 4+ years architecting high-performance APIs, GenAI pipelines, and ML-powered systems that handle real production traffic.</p>
+            <div class="hero-badges reveal d3">
+                <span class="badge badge-accent">Python</span>
+                <span class="badge badge-accent">Django / DRF</span>
+                <span class="badge">LangChain</span>
+                <span class="badge">PostgreSQL</span>
+                <span class="badge">AWS</span>
+                <span class="badge">OpenAI GPT-4</span>
+                <span class="badge">XGBoost</span>
+                <span class="badge">Docker</span>
+            </div>
+            <div class="hero-cta reveal d4">
+                <a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                <a href="#" class="btn-outline"><i class="fas fa-download"></i> Download CV</a>
+            </div>
+            <div class="hero-socials reveal d5">
+                <a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a>
+                <a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a class="social-btn" href="mailto:neha99iu@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
+        <div class="hero-photo reveal d3">
+            <div class="hero-photo-frame">
+                <img src="img/header-img.jpg" alt="Neha Jaiswal">
+            </div>
+            <div class="hero-float-card card-1 reveal d5">
+                <div class="float-label">Daily API Requests</div>
+                <div class="float-value">50K+</div>
+            </div>
+            <div class="hero-float-card card-2 reveal d6">
+                <div class="float-label">API Uptime</div>
+                <div class="float-value">99.5%</div>
+            </div>
+        </div>
+    </div>
+</section>
 
-        <!-- ==================== HERO ==================== -->
-        <div class="container-fluid" id="pigraHome">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-12 col-lg-3">
-                        <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
-                            <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
-                                <h1 class="display-6 text-white mb-0"><img src="img/logo.jpg" style="width:150px;height:150px;border-radius:50%;"/></h1>
-                            </a>
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.3s">
-                                <p class="text-white sub-title">Hello I'm Neha</p>
-                                <h1 class="display-6 text-white mb-0">Senior Backend Developer</h1>
-                                <p class="text-white mt-2" style="opacity:0.7;font-size:0.95rem;">Python &amp; Django Architect | AI/GenAI Specialist</p>
-                            </div>
-                        </div>
+<!-- STATS -->
+<section id="stats">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-card reveal d1"><div class="stat-num">4<span>+</span></div><div class="stat-label">Years in Production</div></div>
+            <div class="stat-card reveal d2"><div class="stat-num">50K<span>+</span></div><div class="stat-label">Daily API Requests</div></div>
+            <div class="stat-card reveal d3"><div class="stat-num">6<span>+</span></div><div class="stat-label">AI/ML Projects Shipped</div></div>
+            <div class="stat-card reveal d4"><div class="stat-num">99.5<span>%</span></div><div class="stat-label">API Uptime</div></div>
+            <div class="stat-card reveal d5"><div class="stat-num">92<span>%</span></div><div class="stat-label">ML ROC-AUC Score</div></div>
+            <div class="stat-card reveal d6"><div class="stat-num">5<span>+</span></div><div class="stat-label">Microservices Built</div></div>
+            <div class="stat-card reveal d7"><div class="stat-num">3</div><div class="stat-label">Companies Served</div></div>
+            <div class="stat-card reveal d8"><div class="stat-num">3<span>+</span></div><div class="stat-label">Juniors Mentored</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- WHY HIRE ME -->
+<section id="why">
+    <div class="container">
+        <div class="section-label reveal">Value Proposition</div>
+        <h2 class="section-title reveal d1">Why Hire <span class="gradient-text">Me?</span></h2>
+        <div class="why-grid">
+            <div class="why-card reveal d1">
+                <div class="why-icon"><i class="fas fa-server"></i></div>
+                <h4>I Ship Production Code, Not Demos</h4>
+                <p>Every project handles real users and real traffic. 50K+ daily requests, 99.5% uptime, live on Google Play — not tutorial clones or GitHub-only code.</p>
+            </div>
+            <div class="why-card reveal d2">
+                <div class="why-icon"><i class="fas fa-robot"></i></div>
+                <h4>AI That Works in Production</h4>
+                <p>I don't just call OpenAI APIs. I build complete GenAI backends — RAG pipelines with FAISS/ChromaDB, embedding optimization, hallucination reduction, and cost-optimized inference.</p>
+            </div>
+            <div class="why-card reveal d3">
+                <div class="why-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h4>Backend + ML = Full Pipeline</h4>
+                <p>Most backend devs can't do ML. Most ML engineers can't build APIs. I do both — from data preprocessing &amp; model training (92% ROC-AUC) to production REST endpoints.</p>
+            </div>
+            <div class="why-card reveal d4">
+                <div class="why-icon"><i class="fas fa-users"></i></div>
+                <h4>I Grow Teams, Not Just Code</h4>
+                <p>Currently mentoring 3 junior devs. I write code others can maintain, define API contracts teams can work with, and establish review practices that improve quality.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT + TIMELINE -->
+<section id="about">
+    <div class="container">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;">
+            <div>
+                <div class="section-label reveal">About Me</div>
+                <h2 class="section-title reveal d1">I Don't Just Write Code —<br>I <span class="gradient-text">Architect Solutions</span></h2>
+                <p class="reveal d2" style="font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Over 4+ years, I've evolved from writing Django CRUD APIs to designing complete backend ecosystems — microservices handling 50K+ daily requests, GenAI pipelines that reduce LLM hallucinations, and ML models serving real-time predictions.</p>
+
+                <div class="reveal d3" style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px;">
+                    <h5 style="font-size:0.95rem;color:var(--accent);margin-bottom:14px;">What I Actually Do Daily</h5>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Design API architectures</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Build RAG pipelines</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Optimize DB queries 20%+</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Deploy AWS + Docker</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Train &amp; serve ML models</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Mentor junior devs</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Define API contracts</p>
+                        <p style="font-size:0.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Code review &amp; QA</p>
                     </div>
-                    <div class="col-12 col-lg-9">
-                        <div class="header-img d-flex h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-5">
-                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
-                                        <img src="img/header-img.jpg" class="img-fluid w-100" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Neha Jaiswal">
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <p style="font-size:0.85rem;color:#667eea;font-weight:600;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">BACKEND ENGINEER &bull; AI ARCHITECT &bull; PROBLEM SOLVER</p>
-                                    <h1 class="display-6 mb-3">I Build Systems That <span class="typing-text" style="color:#667eea;">Handle 50K+ Requests/Day</span></h1>
-                                    <p class="mb-3" style="font-size:1.05rem;line-height:1.7;color:#444;">From RESTful APIs processing thousands of daily requests to GenAI pipelines that make documents talk — I architect backend systems that <strong>actually ship to production</strong>.</p>
+                </div>
 
-                                    <div class="mb-3">
-                                        <span class="tech-badge badge-python">Python</span>
-                                        <span class="tech-badge badge-django">Django / DRF</span>
-                                        <span class="tech-badge badge-ai">LangChain</span>
-                                        <span class="tech-badge badge-db">PostgreSQL</span>
-                                        <span class="tech-badge badge-devops">AWS</span>
-                                        <span class="tech-badge badge-ml">OpenAI GPT-4</span>
-                                    </div>
+                <div class="reveal d4">
+                    <div class="stack-category"><div class="stack-label">Languages &amp; Frameworks</div><div><span class="badge badge-accent">Python</span><span class="badge badge-accent">Django</span><span class="badge badge-accent">DRF</span><span class="badge">REST APIs</span></div></div>
+                    <div class="stack-category"><div class="stack-label">AI / ML</div><div><span class="badge">LangChain</span><span class="badge">OpenAI GPT-4</span><span class="badge">Whisper</span><span class="badge">FAISS</span><span class="badge">ChromaDB</span><span class="badge">XGBoost</span><span class="badge">Scikit-learn</span></div></div>
+                    <div class="stack-category"><div class="stack-label">Databases &amp; Caching</div><div><span class="badge">PostgreSQL</span><span class="badge">MySQL</span><span class="badge">Redis</span><span class="badge">Celery</span></div></div>
+                    <div class="stack-category"><div class="stack-label">DevOps &amp; Cloud</div><div><span class="badge">AWS (EC2, S3, RDS)</span><span class="badge">Docker</span><span class="badge">Nginx</span><span class="badge">CI/CD</span><span class="badge">Git</span></div></div>
+                </div>
+            </div>
 
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fas fa-briefcase text-primary me-3"></i>
-                                        <p class="text-dark mb-0"><strong>Currently:</strong> Sr. Backend Dev &amp; AI Lead @ RTC Knowledge Services</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-2">
-                                        <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                        <p class="text-dark mb-0">Noida, India</p>
-                                    </div>
-                                    <div class="d-flex align-items-center mb-4">
-                                        <i class="fas fa-envelope text-primary me-3"></i>
-                                        <p class="text-dark mb-0"><a href="mailto:neha99iu@gmail.com" class="text-decoration-none">neha99iu@gmail.com</a></p>
-                                    </div>
-                                    <div class="d-flex flex-wrap gap-2">
-                                        <a class="btn btn-primary py-2 px-4" href="#pigraContact"><i class="fas fa-paper-plane me-2"></i>Hire Me</a>
-                                        <a class="btn btn-outline-primary py-2 px-4" href="#"><i class="fas fa-download me-2"></i>Download CV</a>
-                                    </div>
-                                    <div class="d-flex mt-3">
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/neha-5456"><i class="fab fa-github text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.youtube.com/@codeRevisit/"><i class="fab fa-youtube text-white"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Timeline -->
+            <div>
+                <div class="section-label reveal">Career</div>
+                <h2 class="section-title reveal d1" style="font-size:1.8rem;">My <span class="gradient-text">Journey</span></h2>
+                <div class="timeline reveal d2">
+                    <div class="tl-item current">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">Nov 2025 — Present</div>
+                        <div class="tl-role">Senior Backend Dev &amp; AI Lead</div>
+                        <div class="tl-company">RTC Knowledge Services</div>
+                        <div class="tl-tags"><span class="tl-tag tl-tag-gold">GenAI</span><span class="tl-tag tl-tag-green">Team Lead</span></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">Aug 2022 — Sep 2025</div>
+                        <div class="tl-role">Backend Developer</div>
+                        <div class="tl-company">Tech Prastish Software Solutions</div>
+                        <div class="tl-tags"><span class="tl-tag tl-tag-gold">RAG / LangChain</span><span class="tl-tag tl-tag-blue">ML Pipelines</span></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">Jan 2021 — Jul 2022</div>
+                        <div class="tl-role">Python / Django Developer</div>
+                        <div class="tl-company">Baseline IT Development</div>
+                        <div class="tl-tags"><span class="tl-tag tl-tag-blue">Django APIs</span><span class="tl-tag tl-tag-green">Payments</span></div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-dot"></div>
+                        <div class="tl-date">2016 — 2020</div>
+                        <div class="tl-role">B.Tech Computer Science</div>
+                        <div class="tl-company">SBSS University</div>
+                    </div>
+                </div>
+
+                <div class="reveal d3" style="margin-top:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;">
+                    <h5 style="font-size:0.95rem;color:var(--accent);margin-bottom:12px;">Education &amp; Certifications</h5>
+                    <p style="font-size:0.9rem;margin-bottom:8px;"><strong style="color:var(--text);">B.Tech Computer Science</strong> — SBSS University (2016-2020)</p>
+                    <p style="font-size:0.85rem;color:var(--text-muted);margin:0;">Certified: Data Science with Python · Django Developer · PostgreSQL &amp; Window Functions</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <div class="section-label reveal">Portfolio</div>
+        <h2 class="section-title reveal d1">What I've <span class="gradient-text">Built</span></h2>
+        <p class="reveal d2" style="max-width:600px;margin-bottom:48px;">Every project below runs in production with real users. No tutorials, no demos — just code that ships.</p>
+
+        <!-- Project 1: Learnify -->
+        <div class="project">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-ai">AI / Full-Stack</span>
+                    <h3 class="project-name">Learnify</h3>
+                    <p class="project-sub">Adaptive English Learning with 8 AI-Powered Test Modules</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Students preparing for IELTS/TOEFL had no way to get instant, AI-driven feedback on speaking and writing.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">Built Django backend integrating GPT-4 (essay grading), Whisper (speech-to-text), Edge TTS (listening tests), and DALL-E (image-based tests) into a unified assessment engine.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">8 intelligent test modules, real-time speech scoring, automated essay grading, zero-downtime CI/CD deployment.</div></div>
+                    <div class="terminal"><span class="t-label">Architecture:</span><br><span class="t-comp">Student</span> <span class="t-arrow">→</span> <span class="t-comp">Next.js</span> <span class="t-arrow">→</span> <span class="t-comp">Django REST API</span><br>&nbsp;&nbsp;<span class="t-arrow">├→</span> <span class="t-comp">GPT-4</span> <span class="t-label">(grading)</span> &nbsp;<span class="t-arrow">├→</span> <span class="t-comp">Whisper</span> <span class="t-label">(STT)</span><br>&nbsp;&nbsp;<span class="t-arrow">├→</span> <span class="t-comp">Edge TTS</span> <span class="t-label">(audio)</span> <span class="t-arrow">└→</span> <span class="t-comp">DALL-E</span> <span class="t-label">(images)</span><br>&nbsp;&nbsp;<span class="t-arrow">└→</span> <span class="t-comp">MySQL</span> <span class="t-label">(scores + analytics)</span></div>
+                    <div><span class="badge badge-accent">Django 4.2</span><span class="badge">GPT-4</span><span class="badge">Whisper</span><span class="badge">DALL-E</span><span class="badge">MySQL</span><span class="badge">Nginx</span></div>
+                </div>
+                <div class="project-img reveal d2"><img src="img/Portfolio-1.jpeg" alt="Learnify"></div>
+            </div>
+        </div>
+
+        <!-- Project 2: GenAI Document Chatbot -->
+        <div class="project">
+            <div class="project-grid" style="direction:rtl;">
+                <div class="project-img reveal d1" style="direction:ltr;"><img src="img/Portfolio-1.jpeg" alt="GenAI Chatbot"></div>
+                <div class="reveal" style="direction:ltr;">
+                    <span class="project-tag ptag-ai">GenAI / RAG</span>
+                    <h3 class="project-name">GenAI Document Chatbot</h3>
+                    <p class="project-sub">Chat With Your Documents Using RAG + Vector Search</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Users needed answers from large PDF/DOCX files — manual search was slow and LLMs without context hallucinated.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">Built RAG pipeline: chunk documents, embed via OpenAI, store in FAISS/ChromaDB, retrieve top-K context, feed to GPT-4 for grounded answers.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">Sub-second retrieval. Multi-format support. Significantly reduced hallucinations through strict context grounding.</div></div>
+                    <div class="terminal"><span class="t-label">RAG Pipeline:</span><br><span class="t-comp">Upload</span> <span class="t-arrow">→</span> <span class="t-comp">Chunk</span> <span class="t-arrow">→</span> <span class="t-comp">Embed</span> <span class="t-arrow">→</span> <span class="t-comp">FAISS Store</span><br><span class="t-comp">Query</span> <span class="t-arrow">→</span> <span class="t-comp">Embed</span> <span class="t-arrow">→</span> <span class="t-comp">Top-K</span> <span class="t-arrow">→</span> <span class="t-comp">GPT-4</span> <span class="t-arrow">→</span> <span class="t-result">Answer</span></div>
+                    <div><span class="badge badge-accent">LangChain</span><span class="badge">FAISS</span><span class="badge">ChromaDB</span><span class="badge">OpenAI</span><span class="badge">Django</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: VISA Interview -->
+        <div class="project">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-ai">AI / Speech</span>
+                    <h3 class="project-name">AI VISA Interview Prep</h3>
+                    <p class="project-sub">Mock Interview Simulator with Real-Time Speech Analysis</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Visa applicants had no way to practice realistic interviews with instant feedback — coaching was expensive and limited.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">Real-time interview engine: Whisper converts speech to text, GPT-4 analyzes confidence/clarity/relevance, then generates adaptive follow-up questions.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">Supports F1, B1/B2, H1B, Schengen visa types. Multi-dimension scoring. Adaptive difficulty. Session reports.</div></div>
+                    <div class="terminal"><span class="t-label">Interview Flow:</span><br><span class="t-comp">Speak</span> <span class="t-arrow">→</span> <span class="t-comp">Whisper STT</span> <span class="t-arrow">→</span> <span class="t-comp">GPT-4 Analysis</span> <span class="t-arrow">→</span> <span class="t-comp">Score</span> <span class="t-arrow">→</span> <span class="t-result">Next Q (adaptive)</span></div>
+                    <div><span class="badge badge-accent">Django</span><span class="badge">GPT-4</span><span class="badge">Whisper</span><span class="badge">PostgreSQL</span></div>
+                </div>
+                <div class="project-img reveal d2"><img src="img/Portfolio-1.jpeg" alt="VISA AI"></div>
+            </div>
+        </div>
+
+        <!-- Project 4: SOP Writer -->
+        <div class="project">
+            <div class="project-grid" style="direction:rtl;">
+                <div class="project-img reveal d1" style="direction:ltr;"><img src="img/Portfolio-1.jpeg" alt="SOP Writer"></div>
+                <div class="reveal" style="direction:ltr;">
+                    <span class="project-tag ptag-ai">GenAI / NLP</span>
+                    <h3 class="project-name">AI SOP Writer &amp; Analyzer</h3>
+                    <p class="project-sub">Generate &amp; Analyze University SOPs with AI</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Students struggled writing compelling SOPs — generic templates lacked personalization, professional editors charged heavily.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">Prompt engineering pipeline: student profile + university + program generates tailored SOPs, then analyzes across 4 dimensions with rewrite suggestions.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">University-specific generation for MS/MBA/PhD. 4-dimension scoring (structure/coherence/grammar/persuasiveness). Version history.</div></div>
+                    <div><span class="badge badge-accent">Django</span><span class="badge">GPT-4</span><span class="badge">Prompt Engineering</span><span class="badge">PostgreSQL</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5: Churn Prediction -->
+        <div class="project">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-ml">Machine Learning</span>
+                    <h3 class="project-name">Customer Churn Prediction</h3>
+                    <p class="project-sub">End-to-End ML Pipeline with Production REST API</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Telecom company losing customers without knowing who was at risk — reactive retention was too late and expensive.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">Complete ML pipeline: feature engineering, trained 3 models (LR/RF/XGBoost), hyperparameter tuning via GridSearchCV, deployed as Django REST inference API.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text"><strong style="color:var(--accent);">92% ROC-AUC.</strong> Real-time predictions with confidence scores. Top-5 churn driver explanations per customer.</div></div>
+                    <div class="terminal"><span class="t-label">Pipeline:</span> <span class="t-comp">Data</span> <span class="t-arrow">→</span> <span class="t-comp">Features</span> <span class="t-arrow">→</span> <span class="t-comp">XGBoost</span> <span class="t-arrow">→</span> <span class="t-comp">Django API</span> = <span class="t-result">92% ROC-AUC</span></div>
+                    <div><span class="badge">XGBoost</span><span class="badge">Scikit-learn</span><span class="badge">Pandas</span><span class="badge badge-accent">Django REST</span></div>
+                </div>
+                <div class="project-img reveal d2"><img src="img/Portfolio-1.jpeg" alt="Churn"></div>
+            </div>
+        </div>
+
+        <!-- Project 6: Fraud Detection -->
+        <div class="project">
+            <div class="project-grid" style="direction:rtl;">
+                <div class="project-img reveal d1" style="direction:ltr;"><img src="img/Portfolio-1.jpeg" alt="Fraud"></div>
+                <div class="reveal" style="direction:ltr;">
+                    <span class="project-tag ptag-ml">Anomaly Detection</span>
+                    <h3 class="project-name">Fraud Detection Service</h3>
+                    <p class="project-sub">Real-Time Credit Card Fraud Screening</p>
+                    <div class="psi"><div class="psi-label psi-problem">Problem</div><div class="psi-text">Only 0.2% of transactions are fraudulent — but missing them costs millions. Standard models overwhelmed by 99.8% legitimate data.</div></div>
+                    <div class="psi"><div class="psi-label psi-solution">Solution</div><div class="psi-text">SMOTE oversampling + ensemble of XGBoost (precision) and Isolation Forest (anomaly), with cost-function threshold optimization.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text"><strong style="color:var(--accent);">95%+ recall</strong> — catches 19 out of 20 fraud cases. Low-latency API for real-time approve/flag/block.</div></div>
+                    <div class="terminal"><span class="t-label">Pipeline:</span> <span class="t-comp">Transactions</span> <span class="t-arrow">→</span> <span class="t-comp">SMOTE</span> <span class="t-arrow">→</span> <span class="t-comp">XGBoost + IsolationForest</span> <span class="t-arrow">→</span> <span class="t-comp">API</span> = <span class="t-result">95%+ Recall</span></div>
+                    <div><span class="badge">XGBoost</span><span class="badge">Isolation Forest</span><span class="badge">SMOTE</span><span class="badge badge-accent">Python</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Banner -->
+        <div class="cta-section reveal" style="margin-top:60px;">
+            <h3>6 AI/ML Projects in Production.</h3>
+            <p>I build backends that scale. I integrate AI that works. Let's talk about what I can build for you.</p>
+            <a href="#contact" class="btn-primary" style="display:inline-flex;"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+        </div>
+
+        <!-- Project 7: EasyClean -->
+        <div class="project" style="margin-top:20px;">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-backend">Mobile Backend</span>
+                    <h3 class="project-name">EasyClean</h3>
+                    <p class="project-sub">On-Demand Laundry Service App — Live on Google Play</p>
+                    <div class="psi"><div class="psi-label psi-solution">Built</div><div class="psi-text">Django REST backend with partner management, driver GPS tracking, slot scheduling, and payment gateway integration.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">Live on Google Play. Real-time order tracking. Multi-partner network operational.</div></div>
+                    <div><span class="badge badge-accent">Django</span><span class="badge">REST API</span><span class="badge">PostgreSQL</span><span class="badge">Flutter</span></div>
+                    <a href="https://play.google.com/store/apps/details?id=com.easyclean.laundryowner" target="_blank" class="live-btn"><i class="fab fa-google-play"></i> Google Play</a>
+                </div>
+                <div class="reveal d2">
+                    <div class="scroll-gallery">
+                        <div class="sg-item"><img src="img/Screenshot1.png" alt="EasyClean 1"></div>
+                        <div class="sg-item"><img src="img/project2.png" alt="EasyClean 2"></div>
+                        <div class="sg-item"><img src="img/project4.png" alt="EasyClean 3"></div>
+                        <div class="sg-item"><img src="img/project5.png" alt="EasyClean 4"></div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== IMPACT STATS ==================== -->
-        <div class="container-fluid" style="background:#f8f9fc;">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">At a Glance</p>
-                                <h1 class="display-6 text-white mb-0">Production Impact</h1>
-                            </div>
-                        </div>
+        <!-- Project 8: Aap Ka Bazar -->
+        <div class="project">
+            <div class="project-grid" style="direction:rtl;">
+                <div class="reveal d1" style="direction:ltr;">
+                    <div class="scroll-gallery">
+                        <div class="sg-item"><img src="img/p1.png" alt="Bazar 1"></div>
+                        <div class="sg-item"><img src="img/p2.png" alt="Bazar 2"></div>
+                        <div class="sg-item"><img src="img/p3.png" alt="Bazar 3"></div>
+                        <div class="sg-item"><img src="img/p4.png" alt="Bazar 4"></div>
                     </div>
-                    <div class="col-lg-9">
-                        <div class="h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.1s"><div class="impact-card"><div class="impact-number">4+</div><div class="impact-label">Years in Production</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s"><div class="impact-card"><div class="impact-number">50K+</div><div class="impact-label">Daily API Requests</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s"><div class="impact-card"><div class="impact-number">6+</div><div class="impact-label">AI/ML Projects Shipped</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.4s"><div class="impact-card"><div class="impact-number">99.5%</div><div class="impact-label">API Uptime</div></div></div>
-                            </div>
-                            <div class="row g-4 mt-2">
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.5s"><div class="impact-card"><div class="impact-number">92%</div><div class="impact-label">ML Model ROC-AUC</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.6s"><div class="impact-card"><div class="impact-number">5+</div><div class="impact-label">Microservices Built</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.7s"><div class="impact-card"><div class="impact-number">3</div><div class="impact-label">Companies Served</div></div></div>
-                                <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.8s"><div class="impact-card"><div class="impact-number">3+</div><div class="impact-label">Juniors Mentored</div></div></div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+                <div class="reveal" style="direction:ltr;">
+                    <span class="project-tag ptag-backend">Mobile Backend</span>
+                    <h3 class="project-name">Aap Ka Bazar</h3>
+                    <p class="project-sub">Online Grocery Platform — 10K+ Products</p>
+                    <div class="psi"><div class="psi-label psi-solution">Built</div><div class="psi-text">Django backend with real-time inventory management, order lifecycle engine, secure payments, delivery route optimization.</div></div>
+                    <div class="psi"><div class="psi-label psi-impact">Impact</div><div class="psi-text">10,000+ products live. Daily deliveries operational. Live on Google Play.</div></div>
+                    <div><span class="badge badge-accent">Django</span><span class="badge">REST API</span><span class="badge">PostgreSQL</span><span class="badge">Flutter</span></div>
+                    <a href="https://play.google.com/store/apps/details?id=co.aapkabazar.app" target="_blank" class="live-btn"><i class="fab fa-google-play"></i> Google Play</a>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== WHY HIRE ME ==================== -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Value Proposition</p>
-                                <h1 class="display-6 text-white mb-0">Why Hire Me?</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="why-card">
-                                        <div class="why-icon why-icon-arch"><i class="fas fa-server"></i></div>
-                                        <h5 class="mb-2">I Ship Production Code, Not Demos</h5>
-                                        <p class="text-muted mb-0">Every project in my portfolio handles real users and real traffic. 50K+ daily requests, 99.5% uptime, live on Google Play — not tutorial clones or GitHub-only code.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                                    <div class="why-card">
-                                        <div class="why-icon why-icon-ai"><i class="fas fa-robot"></i></div>
-                                        <h5 class="mb-2">AI That Works in Production</h5>
-                                        <p class="text-muted mb-0">I don't just call OpenAI APIs. I build complete GenAI backends — RAG pipelines with FAISS/ChromaDB, embedding optimization, hallucination reduction, and cost-optimized inference.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="why-card">
-                                        <div class="why-icon why-icon-perf"><i class="fas fa-tachometer-alt"></i></div>
-                                        <h5 class="mb-2">Backend + ML = Full Pipeline</h5>
-                                        <p class="text-muted mb-0">Most backend devs can't do ML. Most ML engineers can't build APIs. I do both — from data preprocessing &amp; model training (92% ROC-AUC) to production REST endpoints.</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                                    <div class="why-card">
-                                        <div class="why-icon why-icon-team"><i class="fas fa-users"></i></div>
-                                        <h5 class="mb-2">I Grow Teams, Not Just Code</h5>
-                                        <p class="text-muted mb-0">Currently mentoring 3 junior devs. I write code that others can maintain, define API contracts teams can work with, and establish review practices that improve quality.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Project 9: Musika -->
+        <div class="project">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-web">Web Platform</span>
+                    <h3 class="project-name">Musika Lessons</h3>
+                    <p class="project-sub">Music Education LMS — 3000+ Cities Worldwide</p>
+                    <div class="psi"><div class="psi-label psi-solution">Built</div><div class="psi-text">Large-scale platform connecting students with verified music teachers. Teacher onboarding, lesson scheduling, booking with payments.</div></div>
+                    <div><span class="badge badge-accent">Django</span><span class="badge">PostgreSQL</span><span class="badge">AWS</span></div>
+                    <a href="https://www.musikalessons.com/" target="_blank" class="live-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
+                </div>
+                <div class="project-img reveal d2"><img src="img/Portfolio-1.jpeg" alt="Musika"></div>
+            </div>
+        </div>
+
+        <!-- Project 10: MyCar -->
+        <div class="project">
+            <div class="project-grid" style="direction:rtl;">
+                <div class="project-img reveal d1" style="direction:ltr;"><iframe src="https://mycar.gr" title="MyCar" loading="lazy"></iframe></div>
+                <div class="reveal" style="direction:ltr;">
+                    <span class="project-tag ptag-web">E-Commerce</span>
+                    <h3 class="project-name">MyCar — Greece</h3>
+                    <p class="project-sub">Car Accessories E-Commerce Platform</p>
+                    <div class="psi"><div class="psi-label psi-solution">Built</div><div class="psi-text">Complete backend redesign. Performance optimization, enhanced security, mobile-responsive.</div></div>
+                    <div><span class="badge">Backend</span><span class="badge">REST API</span><span class="badge">Database</span></div>
+                    <a href="https://mycar.gr/" target="_blank" class="live-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
                 </div>
             </div>
         </div>
 
-        <!-- ==================== ABOUT + CAREER TIMELINE ==================== -->
-        <div class="container-fluid" id="pigraAbout">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-12 col-lg-3">
-                        <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">About Me</p>
-                                <h1 class="display-6 text-white mb-0">My Journey</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-lg-9">
-                        <div class="about-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-5">
-                                <div class="col-xl-5">
-                                    <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <img src="img/about.jpg_large" class="img-fluid w-100" alt="Neha Jaiswal">
-                                        <div class="sosial-icon">
-                                            <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/neha-5456"><i class="fab fa-github text-white"></i></a>
-                                            <a class="btn btn-primary btn-sm-square me-3" href="https://www.youtube.com/@codeRevisit/"><i class="fab fa-youtube text-white"></i></a>
-                                            <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/coderevisit21720/"><i class="fab fa-instagram text-white"></i></a>
-                                            <a class="btn btn-primary btn-sm-square me-0" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
-                                        </div>
-                                    </div>
-
-                                    <!-- Career Timeline -->
-                                    <div class="mt-4 wow fadeInUp" data-wow-delay="0.3s">
-                                        <h5 class="mb-3" style="color:#667eea;font-weight:700;">Career Progression</h5>
-                                        <div class="timeline-item current">
-                                            <div class="timeline-date">Nov 2025 - Present</div>
-                                            <div class="timeline-role">Senior Backend Dev &amp; AI Lead</div>
-                                            <div class="timeline-company">RTC Knowledge Services</div>
-                                            <div><span class="timeline-highlight tl-purple">GenAI</span><span class="timeline-highlight tl-green">Team Lead</span></div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timeline-date">Aug 2022 - Sep 2025</div>
-                                            <div class="timeline-role">Backend Developer</div>
-                                            <div class="timeline-company">Tech Prastish Software Solutions</div>
-                                            <div><span class="timeline-highlight tl-purple">RAG/LangChain</span><span class="timeline-highlight tl-blue">ML Pipelines</span></div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timeline-date">Jan 2021 - Jul 2022</div>
-                                            <div class="timeline-role">Python / Django Developer</div>
-                                            <div class="timeline-company">Baseline IT Development</div>
-                                            <div><span class="timeline-highlight tl-blue">Django APIs</span><span class="timeline-highlight tl-green">Payment Integration</span></div>
-                                        </div>
-                                        <div class="timeline-item">
-                                            <div class="timeline-date">2016 - 2020</div>
-                                            <div class="timeline-role">B.Tech Computer Science</div>
-                                            <div class="timeline-company">SBSS University</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
-                                    <h4 class="mb-3">I Don't Just Write Code — I Architect Solutions</h4>
-                                    <p class="mb-3" style="font-size:1.05rem;line-height:1.7;color:#444;">Over 4+ years, I've evolved from writing Django CRUD APIs to <strong>designing complete backend ecosystems</strong> — microservices handling 50K+ daily requests, GenAI pipelines that reduce LLM hallucinations, and ML models serving real-time predictions.</p>
-
-                                    <div style="background:#f8f9fc;border-radius:12px;padding:20px;margin-bottom:20px;">
-                                        <h6 style="color:#667eea;margin-bottom:12px;font-weight:700;">What I Actually Do Daily:</h6>
-                                        <div class="row g-2">
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Design API architectures</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Build RAG/LangChain pipelines</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Optimize DB queries (20%+ faster)</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Deploy on AWS with Docker</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Train &amp; serve ML models</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Mentor junior developers</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Define API contracts with teams</p></div>
-                                            <div class="col-6"><p class="mb-1" style="font-size:14px;"><i class="fas fa-check-circle text-success me-2"></i>Code review &amp; quality gates</p></div>
-                                        </div>
-                                    </div>
-
-                                    <h6 style="font-weight:700;margin-bottom:10px;">Full Tech Stack:</h6>
-                                    <div class="mb-2">
-                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Languages &amp; Frameworks</small><br>
-                                        <span class="tech-badge badge-python">Python</span><span class="tech-badge badge-django">Django</span><span class="tech-badge badge-django">DRF</span><span class="tech-badge badge-api">REST APIs</span>
-                                    </div>
-                                    <div class="mb-2">
-                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">AI / ML</small><br>
-                                        <span class="tech-badge badge-ai">LangChain</span><span class="tech-badge badge-ai">OpenAI GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-ml">FAISS</span><span class="tech-badge badge-ml">ChromaDB</span><span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Scikit-learn</span>
-                                    </div>
-                                    <div class="mb-2">
-                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">Databases &amp; Caching</small><br>
-                                        <span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-db">MySQL</span><span class="tech-badge badge-devops">Redis</span><span class="tech-badge badge-devops">Celery</span>
-                                    </div>
-                                    <div class="mb-4">
-                                        <small style="color:#999;font-weight:600;text-transform:uppercase;letter-spacing:1px;">DevOps &amp; Cloud</small><br>
-                                        <span class="tech-badge badge-cloud">AWS (EC2, S3, RDS)</span><span class="tech-badge badge-cloud">Docker</span><span class="tech-badge badge-devops">Nginx</span><span class="tech-badge badge-devops">CI/CD</span><span class="tech-badge badge-devops">Git</span>
-                                    </div>
-
-                                    <a href="#" class="btn btn-primary py-2 px-4 me-2"><i class="fas fa-download me-2"></i>Download CV</a>
-                                    <a href="#pigraContact" class="btn btn-outline-primary py-2 px-4"><i class="fas fa-paper-plane me-2"></i>Let's Talk</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Project 11: Home Royale -->
+        <div class="project">
+            <div class="project-grid">
+                <div class="reveal">
+                    <span class="project-tag ptag-web">E-Commerce</span>
+                    <h3 class="project-name">Home Royale — Australia</h3>
+                    <p class="project-sub">Premium Kitchenware E-Commerce</p>
+                    <div class="psi"><div class="psi-label psi-solution">Built</div><div class="psi-text">E-commerce for premium kitchenware brand. Secure checkout, product management, performance optimization.</div></div>
+                    <div><span class="badge">Backend</span><span class="badge">E-Commerce</span><span class="badge">Database</span></div>
+                    <a href="https://homeroyale.com.au/" target="_blank" class="live-btn"><i class="fas fa-external-link-alt"></i> Visit Site</a>
                 </div>
+                <div class="project-img reveal d2"><iframe src="https://homeroyale.com.au/" title="Home Royale" loading="lazy"></iframe></div>
             </div>
         </div>
 
-        <!-- ==================== PORTFOLIO ==================== -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Portfolio</p>
-                                <h1 class="display-6 text-white mb-0">What I've Built</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
+    </div>
+</section>
 
-                            <!-- PROJECT 1: Learnify -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ai">AI / FULL-STACK</span>
-                                        <h1 class="display-6 mb-2">Learnify</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Adaptive English Learning Platform with 8 AI-Powered Test Modules</p>
+<!-- SERVICES -->
+<section id="services">
+    <div class="container">
+        <div class="section-label reveal">Services</div>
+        <h2 class="section-title reveal d1">What I Can <span class="gradient-text">Build For You</span></h2>
+        <div class="services-grid">
+            <div class="svc-card reveal d1">
+                <div class="svc-icon"><i class="fas fa-server"></i></div>
+                <h4>Backend Architecture</h4>
+                <p>Scalable RESTful APIs, microservices, and server-side systems for high-traffic production environments.</p>
+                <ul class="svc-list"><li>Django / DRF APIs</li><li>PostgreSQL / Redis</li><li>Celery / Task Queues</li></ul>
+            </div>
+            <div class="svc-card reveal d2">
+                <div class="svc-icon"><i class="fas fa-robot"></i></div>
+                <h4>AI &amp; GenAI Integration</h4>
+                <p>RAG pipelines, LLM orchestration, AI chatbots, speech-to-text systems, and intelligent document processing.</p>
+                <ul class="svc-list"><li>LangChain / RAG</li><li>OpenAI GPT-4 / Whisper</li><li>FAISS / ChromaDB</li></ul>
+            </div>
+            <div class="svc-card reveal d3">
+                <div class="svc-icon"><i class="fas fa-brain"></i></div>
+                <h4>ML Model Serving</h4>
+                <p>End-to-end ML pipelines from data preprocessing to real-time inference APIs for prediction and anomaly detection.</p>
+                <ul class="svc-list"><li>XGBoost / Scikit-learn</li><li>Feature Pipelines</li><li>Inference APIs</li></ul>
+            </div>
+            <div class="svc-card reveal d4">
+                <div class="svc-icon"><i class="fas fa-cloud"></i></div>
+                <h4>Cloud &amp; DevOps</h4>
+                <p>Production deployments with Docker, AWS, Nginx, CI/CD for zero-downtime releases.</p>
+                <ul class="svc-list"><li>AWS (EC2, S3, RDS)</li><li>Docker / Nginx</li><li>CI/CD Pipelines</li></ul>
+            </div>
+        </div>
+    </div>
+</section>
 
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Students preparing for IELTS/TOEFL had no way to get instant, AI-driven feedback on speaking and writing — they had to wait for expensive human evaluators.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a Django backend integrating GPT-4 (essay grading), Whisper (speech-to-text), Edge TTS (listening tests), and DALL-E (image-based tests) into a unified assessment engine.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">8 intelligent test modules across 4 exam types. Real-time speech scoring. Automated essay grading with rubric feedback. Deployed on VPS with zero-downtime CI/CD.</div></div>
-
-                                        <div class="arch-box">
-                                            <span class="arch-label">Architecture:</span><br>
-                                            <span class="arch-component">Student</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Next.js</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Django REST API</span><br>
-                                            &nbsp;&nbsp;<span class="arch-arrow">|-&gt;</span> <span class="arch-component">GPT-4</span> <span class="arch-label">(grading)</span> <span class="arch-arrow">|-&gt;</span> <span class="arch-component">Whisper</span> <span class="arch-label">(STT)</span><br>
-                                            &nbsp;&nbsp;<span class="arch-arrow">|-&gt;</span> <span class="arch-component">Edge TTS</span> <span class="arch-label">(audio)</span> <span class="arch-arrow">|-&gt;</span> <span class="arch-component">DALL-E</span> <span class="arch-label">(images)</span><br>
-                                            &nbsp;&nbsp;<span class="arch-arrow">'-&gt;</span> <span class="arch-component">MySQL</span> <span class="arch-label">(scores + analytics)</span>
-                                        </div>
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django 4.2</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-ai">DALL-E</span><span class="tech-badge badge-db">MySQL</span><span class="tech-badge badge-devops">Nginx</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Learnify"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 2: GenAI Document Chatbot -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ai">GENAI / RAG</span>
-                                        <h1 class="display-6 mb-2">GenAI Document Chatbot</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Chat With Your Documents Using RAG + Vector Search</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Users needed to quickly find specific answers buried in large PDF/DOCX files — manual search was slow and LLMs without context hallucinated answers.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a RAG pipeline: chunk documents with overlap, embed via OpenAI, store in FAISS/ChromaDB, retrieve top-K context, then feed to GPT-4 for grounded answers.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Sub-second retrieval. Multi-format support. Significantly reduced hallucinations through strict context grounding and source attribution.</div></div>
-
-                                        <div class="arch-box">
-                                            <span class="arch-label">RAG Pipeline:</span><br>
-                                            <span class="arch-component">Upload</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Chunk</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Embed</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">FAISS Store</span><br>
-                                            <span class="arch-component">Query</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Embed</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Top-K</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">GPT-4</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Answer</span>
-                                        </div>
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-ai">LangChain</span><span class="tech-badge badge-ml">FAISS</span><span class="tech-badge badge-ml">ChromaDB</span><span class="tech-badge badge-ai">OpenAI</span><span class="tech-badge badge-django">Django</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="GenAI Chatbot"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 3: VISA Interview -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ai">AI / SPEECH</span>
-                                        <h1 class="display-6 mb-2">AI VISA Interview Prep</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Mock Interview Simulator with Real-Time Speech Analysis</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Visa applicants had no way to practice realistic interviews with instant feedback on their spoken responses — coaching was expensive and limited.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a real-time interview engine: Whisper converts speech to text, GPT-4 analyzes confidence/clarity/relevance, then generates adaptive follow-up questions.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Supports F1, B1/B2, H1B, Schengen visa types. Multi-dimension scoring. Adaptive difficulty. Session reports with improvement suggestions.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Whisper</span><span class="tech-badge badge-db">PostgreSQL</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="VISA AI"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 4: SOP Writer -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ai">GENAI / NLP</span>
-                                        <h1 class="display-6 mb-2">AI SOP Writer &amp; Analyzer</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Generate &amp; Analyze University SOPs with AI</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Students struggled to write compelling SOPs — generic templates lacked personalization, and professional editors charged heavily per revision.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built a prompt engineering pipeline that takes student profile + university + program to generate tailored SOPs, then analyzes across 4 dimensions with rewrite suggestions.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">University-specific generation for MS/MBA/PhD. 4-dimension scoring (structure, coherence, grammar, persuasiveness). Version history with diff tracking.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-ai">GPT-4</span><span class="tech-badge badge-ai">Prompt Engineering</span><span class="tech-badge badge-db">PostgreSQL</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="SOP Writer"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 5: Churn Prediction -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ml">MACHINE LEARNING</span>
-                                        <h1 class="display-6 mb-2">Customer Churn Prediction</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">End-to-End ML Pipeline with Production REST API</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Telecom company losing customers without knowing who was at risk — reactive retention efforts were too late and expensive.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Built complete ML pipeline: feature engineering, trained 3 models (LR/RF/XGBoost), hyperparameter tuning with GridSearchCV, deployed as Django REST inference API.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text"><strong>92% ROC-AUC.</strong> Real-time predictions with confidence scores. Top-5 churn driver explanations for each customer. Feature importance dashboard for business teams.</div></div>
-
-                                        <div class="arch-box">
-                                            <span class="arch-label">Pipeline:</span> <span class="arch-component">Data</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Features</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">XGBoost</span> <span class="arch-arrow">-&gt;</span> <span class="arch-component">Django API</span> = <span style="color:#7ee8fa;font-weight:bold;">92% ROC-AUC</span>
-                                        </div>
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Scikit-learn</span><span class="tech-badge badge-python">Pandas</span><span class="tech-badge badge-django">Django REST</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Churn"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 6: Fraud Detection -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-ml">ANOMALY DETECTION</span>
-                                        <h1 class="display-6 mb-2">Fraud Detection Service</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Real-Time Credit Card Fraud Screening</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Only 0.2% of credit card transactions are fraudulent — but missing them costs millions. Standard models overwhelmed by 99.8% legitimate data.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">SMOTE oversampling + ensemble of XGBoost (precision) and Isolation Forest (anomaly detection), with business-cost-function threshold optimization.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text"><strong>95%+ recall</strong> — catches 19 out of 20 fraud cases. Low-latency API for real-time transaction approve/flag/block decisions.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-ml">XGBoost</span><span class="tech-badge badge-ml">Isolation Forest</span><span class="tech-badge badge-ml">SMOTE</span><span class="tech-badge badge-python">Python</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Fraud"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CTA BANNER mid-portfolio -->
-                            <div class="py-5 border-bottom">
-                                <div class="cta-banner wow fadeInUp" data-wow-delay="0.1s">
-                                    <h3>6 AI/ML Projects in Production. Ready for Your Next Challenge.</h3>
-                                    <p>I build backends that scale. I integrate AI that works. Let's talk about what I can build for you.</p>
-                                    <a href="#pigraContact" class="cta-btn">Get In Touch</a>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 7: EasyClean -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-backend">MOBILE BACKEND</span>
-                                        <h1 class="display-6 mb-2">EasyClean</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">On-Demand Laundry Service App</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">On-demand laundry services needed a backend to manage multi-partner networks, real-time driver tracking, and seamless scheduling.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Django REST backend with partner management, driver GPS tracking, slot-based scheduling engine, and payment gateway integration.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">Live on Google Play. Real-time order tracking. Multi-partner network operational.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-devops">Flutter</span>
-                                        </div>
-                                        <a href="https://play.google.com/store/apps/details?id=com.easyclean.laundryowner" target="_blank" class="live-link"><i class="fab fa-google-play"></i> Google Play</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner">
-                                            <div class="scroll-gallery">
-                                                <div class="image-box"><img src="img/Screenshot1.png" alt="EasyClean 1"></div>
-                                                <div class="image-box"><img src="img/project2.png" alt="EasyClean 2"></div>
-                                                <div class="image-box"><img src="img/project4.png" alt="EasyClean 3"></div>
-                                                <div class="image-box"><img src="img/project5.png" alt="EasyClean 4"></div>
-                                            </div>
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 8: Aap Ka Bazar -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-backend">MOBILE BACKEND</span>
-                                        <h1 class="display-6 mb-2">Aap Ka Bazar</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Online Grocery Platform with 10K+ Products</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-problem">Problem</div><div class="ps-text">Growing grocery business needed a scalable backend for 10K+ SKUs with real-time inventory sync and daily delivery logistics.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-solution">Solution</div><div class="ps-text">Django backend with real-time inventory management, order lifecycle engine, secure payments, and delivery route optimization.</div></div>
-                                        <div class="ps-row"><div class="ps-label ps-impact">Impact</div><div class="ps-text">10,000+ products live. Daily deliveries operational. Live on Google Play.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-devops">Flutter</span>
-                                        </div>
-                                        <a href="https://play.google.com/store/apps/details?id=co.aapkabazar.app" target="_blank" class="live-link"><i class="fab fa-google-play"></i> Google Play</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner">
-                                            <div class="scroll-gallery">
-                                                <div class="image-box"><img src="img/p1.png" alt="Bazar 1"></div>
-                                                <div class="image-box"><img src="img/p2.png" alt="Bazar 2"></div>
-                                                <div class="image-box"><img src="img/p3.png" alt="Bazar 3"></div>
-                                                <div class="image-box"><img src="img/p4.png" alt="Bazar 4"></div>
-                                            </div>
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 9: Musika -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-fullstack">WEB PLATFORM</span>
-                                        <h1 class="display-6 mb-2">Musika Lessons</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Music Education LMS — 3000+ Cities Worldwide</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">Large-scale platform connecting students with verified music teachers. Teacher onboarding, lesson scheduling, booking system with availability calendar &amp; payments.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Django</span><span class="tech-badge badge-db">PostgreSQL</span><span class="tech-badge badge-cloud">AWS</span>
-                                        </div>
-                                        <a href="https://www.musikalessons.com/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner"><img src="img/Portfolio-1.jpeg" class="img-fluid" alt="Musika"></div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 10: MyCar -->
-                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-fullstack">E-COMMERCE</span>
-                                        <h1 class="display-6 mb-2">MyCar</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Car Accessories E-Commerce — Greece</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">Complete backend redesign for car accessories e-commerce. Performance optimization, enhanced security, mobile-responsive experience.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Backend</span><span class="tech-badge badge-api">REST API</span><span class="tech-badge badge-db">Database</span>
-                                        </div>
-                                        <a href="https://mycar.gr/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section" style="margin-bottom:152px;">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner">
-                                            <iframe src="https://mycar.gr" width="100%" height="300px" style="border:1px solid #ccc;" title="MyCar" loading="lazy" allowfullscreen></iframe>
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- PROJECT 11: Home Royale -->
-                            <div class="portfolio-item py-5 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="row g-4 align-items-center">
-                                    <div class="col-xl-6">
-                                        <span class="project-type-tag tag-fullstack">E-COMMERCE</span>
-                                        <h1 class="display-6 mb-2">Home Royale</h1>
-                                        <p style="font-size:0.95rem;color:#667eea;font-weight:600;margin-bottom:10px;">Premium Kitchenware — Australia</p>
-
-                                        <div class="ps-row"><div class="ps-label ps-solution">Built</div><div class="ps-text">E-commerce platform for premium kitchenware brand. Secure checkout, product management, performance optimization.</div></div>
-
-                                        <div class="mb-2">
-                                            <span class="tech-badge badge-django">Backend</span><span class="tech-badge badge-api">E-Commerce</span><span class="tech-badge badge-db">Database</span>
-                                        </div>
-                                        <a href="https://homeroyale.com.au/" target="_blank" class="live-link"><i class="fas fa-external-link-alt"></i> Visit Site</a>
-                                    </div>
-                                    <div class="col-9 col-xl-6 portfolio-section">
-                                        <div class="portfolio-img"><div class="portfolio-img-inner">
-                                            <iframe src="https://homeroyale.com.au/" width="100%" height="300px" style="border:1px solid #ccc;" title="Home Royale" loading="lazy" allowfullscreen></iframe>
-                                        </div></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container">
+        <div class="section-label reveal">Contact</div>
+        <h2 class="section-title reveal d1">Let's Build <span class="gradient-text">Something Together</span></h2>
+        <div class="contact-grid">
+            <div class="reveal d2">
+                <p style="font-size:1.05rem;line-height:1.8;margin-bottom:32px;">Whether you need a scalable backend, AI/GenAI integration, or ML-powered features — I'm ready to architect and build it.</p>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div><h5>Email</h5><p><a href="mailto:neha99iu@gmail.com">neha99iu@gmail.com</a></p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <div><h5>Phone</h5><p><a href="tel:+919026778969">+91-9026778969</a></p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><h5>Location</h5><p style="color:var(--text-dim);">Noida, India</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                    <div><h5>LinkedIn</h5><p><a href="https://www.linkedin.com/in/neha-jaiswal-434b97160/">linkedin.com/in/neha-jaiswal</a></p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div><h5>GitHub</h5><p><a href="https://github.com/neha-5456">github.com/neha-5456</a></p></div>
+                </div>
+            </div>
+            <div class="reveal d3">
+                <div class="quick-facts">
+                    <h4><i class="fas fa-bolt" style="margin-right:8px;"></i> Quick Facts</h4>
+                    <p><i class="fas fa-check-circle"></i> Available for full-time opportunities</p>
+                    <p><i class="fas fa-check-circle"></i> Open to remote &amp; hybrid roles</p>
+                    <p><i class="fas fa-check-circle"></i> 4+ years production experience</p>
+                    <p><i class="fas fa-check-circle"></i> Backend + AI/ML dual expertise</p>
+                    <p><i class="fas fa-check-circle"></i> Immediate availability</p>
+                </div>
+                <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+                    <a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV</a>
+                    <a href="mailto:neha99iu@gmail.com" class="btn-outline"><i class="fas fa-paper-plane"></i> Send Email</a>
                 </div>
             </div>
         </div>
+    </div>
+</section>
 
-        <!-- ==================== SERVICES ==================== -->
-        <div class="container-fluid" id="pigraService">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Services</p>
-                                <h1 class="display-6 text-white mb-0">What I Can Build For You</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="service-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2"><i class="fas fa-server fa-3x"></i></div>
-                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">Backend Architecture</a></div>
-                                            <div class="col-xl-4"><p class="mb-0">Scalable RESTful APIs, microservices, and server-side systems designed for high-traffic production environments.</p></div>
-                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>Django / DRF APIs</p><p><i class="fa fa-check me-2"></i>PostgreSQL / Redis</p><p class="mb-0"><i class="fa fa-check me-2"></i>Celery / Task Queues</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2"><i class="fas fa-robot fa-3x"></i></div>
-                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">AI &amp; GenAI Integration</a></div>
-                                            <div class="col-xl-4"><p class="mb-0">RAG pipelines, LLM orchestration, AI chatbots, speech-to-text systems, and intelligent document processing.</p></div>
-                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>LangChain / RAG</p><p><i class="fa fa-check me-2"></i>OpenAI GPT-4 / Whisper</p><p class="mb-0"><i class="fa fa-check me-2"></i>FAISS / ChromaDB</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2"><i class="fas fa-brain fa-3x"></i></div>
-                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">ML Model Serving</a></div>
-                                            <div class="col-xl-4"><p class="mb-0">End-to-end ML pipelines from data preprocessing to real-time inference APIs for prediction and anomaly detection.</p></div>
-                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>XGBoost / Scikit-learn</p><p><i class="fa fa-check me-2"></i>Feature Pipelines</p><p class="mb-0"><i class="fa fa-check me-2"></i>Inference APIs</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.7s">
-                                        <div class="row g-4 align-items-center">
-                                            <div class="col-xl-2"><i class="fas fa-cloud fa-3x"></i></div>
-                                            <div class="col-xl-3"><a href="#" class="h4 mb-0">Cloud &amp; DevOps</a></div>
-                                            <div class="col-xl-4"><p class="mb-0">Production deployments with Docker, AWS, Nginx, CI/CD pipelines for zero-downtime releases.</p></div>
-                                            <div class="col-xl-3"><p><i class="fa fa-check me-2"></i>AWS (EC2, S3, RDS)</p><p><i class="fa fa-check me-2"></i>Docker / Nginx</p><p class="mb-0"><i class="fa fa-check me-2"></i>CI/CD Pipelines</p></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px;">
+            <a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a>
+            <a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a class="social-btn" href="https://www.instagram.com/coderevisit21720/" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
+        <p>&copy; 2025 Neha Jaiswal. All rights reserved.</p>
+    </div>
+</footer>
 
-        <!-- Education -->
-        <div class="container-fluid">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="education-header bg-dark h-100 pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Education</p>
-                                <h1 class="display-6 text-white mb-0">Academic Background</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="education-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4">
-                                <div class="col-12">
-                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                        <div class="d-flex align-items-center mb-3">
-                                            <p class="fs-5 mb-0 me-4">Shaheed Bhagat Singh State University</p>
-                                            <div><span class="fa fa-calendar me-1"></span> 2016 - 2020</div>
-                                        </div>
-                                        <h4 class="mb-3">B.Tech in Computer Science</h4>
-                                        <p class="mb-0">Foundations in software engineering, algorithms, data structures, databases, and web technologies.</p>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="d-flex align-items-center mb-3"><p class="fs-5 mb-0 me-4">Professional Certifications</p></div>
-                                        <h4 class="mb-3">Data Science with Python | Django Developer | PostgreSQL &amp; Window Functions</h4>
-                                        <p class="mb-0">Applied professional training in data science, ML, advanced Django, and PostgreSQL to production systems.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- BACK TO TOP -->
+<a href="#" id="backToTop" class="btn-primary" style="position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:12px;display:none;align-items:center;justify-content:center;z-index:99;padding:0;font-size:18px;box-shadow:0 8px 24px rgba(240,192,64,0.3);"><i class="fas fa-arrow-up"></i></a>
 
-        <!-- Contact -->
-        <div class="container-fluid" id="pigraContact">
-            <div class="container">
-                <div class="row g-0">
-                    <div class="col-lg-3">
-                        <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
-                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
-                                <p class="text-white sub-title">Contact</p>
-                                <h1 class="display-6 text-white mb-0">Let's Build Something Together</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="contact-content h-100 pt-6 ps-6 pb-6">
-                            <div class="bg-light p-4">
-                                <div class="row g-5">
-                                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                                        <h4 class="mb-3">Ready to Discuss Your Project?</h4>
-                                        <p class="mb-4">Whether you need a scalable backend, AI/GenAI integration, or ML-powered features — I'm ready to help architect and build it.</p>
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fas fa-envelope"></i></div>
-                                            <div><h5 class="mb-1">Email</h5><p class="mb-0"><a href="mailto:neha99iu@gmail.com" class="text-decoration-none">neha99iu@gmail.com</a></p></div>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fas fa-map-marker-alt"></i></div>
-                                            <div><h5 class="mb-1">Location</h5><p class="mb-0">Noida, India</p></div>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fab fa-linkedin-in"></i></div>
-                                            <div><h5 class="mb-1">LinkedIn</h5><p class="mb-0"><a href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" class="text-decoration-none">linkedin.com/in/neha-jaiswal</a></p></div>
-                                        </div>
-                                        <div class="d-flex mb-4">
-                                            <div class="btn-xl-square bg-primary text-white me-3"><i class="fab fa-github"></i></div>
-                                            <div><h5 class="mb-1">GitHub</h5><p class="mb-0"><a href="https://github.com/neha-5456" class="text-decoration-none">github.com/neha-5456</a></p></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                                        <div class="cta-banner" style="border-radius:12px;padding:30px;">
-                                            <h4 style="color:#fff;">Quick Facts</h4>
-                                            <div style="text-align:left;color:rgba(255,255,255,0.9);font-size:15px;">
-                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Available for full-time opportunities</p>
-                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Open to remote &amp; hybrid roles</p>
-                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> 4+ years production experience</p>
-                                                <p class="mb-2"><i class="fas fa-check-circle me-2"></i> Backend + AI/ML dual expertise</p>
-                                                <p class="mb-0"><i class="fas fa-check-circle me-2"></i> Immediate availability</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+    "use strict";
 
-        <!-- Footer -->
-        <div class="container-fluid footer bg-dark border-bottom-0">
-            <div class="container wow fadeIn" data-wow-delay="0.1s">
-                <div class="row g-0">
-                    <div class="col-12">
-                        <div class="footer-content h-100 pt-6 ps-6 pb-6">
-                            <div class="row g-4 align-items-center">
-                                <div class="col-12 text-center">
-                                    <div class="d-flex justify-content-center">
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/neha-5456"><i class="fab fa-github text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.youtube.com/@codeRevisit/"><i class="fab fa-youtube text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.instagram.com/coderevisit21720/"><i class="fab fa-instagram text-white"></i></a>
-                                        <a class="btn btn-primary btn-sm-square me-0" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/"><i class="fab fa-linkedin-in text-white"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <span class="text-body"><i class="fas fa-copyright text-body me-2"></i> 2025 Neha Jaiswal. All rights reserved.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    // ===== SCROLL REVEAL =====
+    var revealObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting) e.target.classList.add("visible");
+        });
+    }, { threshold:0.08, rootMargin:"0px 0px -40px 0px" });
+    document.querySelectorAll(".reveal").forEach(function(el) { revealObs.observe(el); });
 
-        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+    // ===== NAV SCROLL =====
+    var nav = document.getElementById("mainNav");
+    window.addEventListener("scroll", function() {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+    });
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+    // ===== SMOOTH SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener("click", function(e) {
+            var t = document.querySelector(this.getAttribute("href"));
+            if (t) { e.preventDefault(); t.scrollIntoView({ behavior:"smooth", block:"start" }); }
+        });
+    });
+
+    // ===== BACK TO TOP =====
+    var btt = document.getElementById("backToTop");
+    window.addEventListener("scroll", function() {
+        btt.style.display = window.scrollY > 400 ? "flex" : "none";
+    });
+
+    // ===== COUNTER ANIMATION =====
+    var counterObs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+            if (e.isIntersecting && !e.target.dataset.done) {
+                e.target.dataset.done = "1";
+                var text = e.target.textContent;
+                var numMatch = text.match(/[\d.]+/);
+                if (!numMatch) return;
+                var target = parseFloat(numMatch[0]);
+                var suffix = text.replace(numMatch[0], "");
+                var hasDot = numMatch[0].indexOf(".") !== -1;
+                var dur = 1500, start = null;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var ease = 1 - Math.pow(1 - p, 3);
+                    var cur = target * ease;
+                    e.target.innerHTML = (hasDot ? cur.toFixed(1) : Math.floor(cur)) + "<span>" + suffix.replace(/[0-9.]/g,"") + "</span>";
+                    if (p < 1) requestAnimationFrame(step);
+                    else e.target.innerHTML = (hasDot ? target.toFixed(1) : target) + "<span>" + suffix.replace(/[0-9.]/g,"") + "</span>";
+                }
+                requestAnimationFrame(step);
+            }
+        });
+    }, { threshold:0.5 });
+    document.querySelectorAll(".stat-num").forEach(function(el) { counterObs.observe(el); });
+
+    // ===== SCROLL GALLERY DRAG =====
+    document.querySelectorAll(".scroll-gallery").forEach(function(g) {
+        var isDown=false, startX, scrollL;
+        g.addEventListener("mousedown", function(e) { isDown=true; startX=e.pageX-g.offsetLeft; scrollL=g.scrollLeft; g.style.cursor="grabbing"; });
+        g.addEventListener("mouseleave", function() { isDown=false; g.style.cursor=""; });
+        g.addEventListener("mouseup", function() { isDown=false; g.style.cursor=""; });
+        g.addEventListener("mousemove", function(e) { if(!isDown) return; e.preventDefault(); g.scrollLeft=scrollL-(e.pageX-g.offsetLeft-startX)*2; });
+    });
+
+    // ===== ACTIVE NAV HIGHLIGHT =====
+    var sections = document.querySelectorAll("section[id]");
+    var navLinks = document.querySelectorAll(".nav-links a");
+    window.addEventListener("scroll", function() {
+        var scrollY = window.scrollY + 150;
+        sections.forEach(function(s) {
+            if (scrollY >= s.offsetTop && scrollY < s.offsetTop + s.offsetHeight) {
+                navLinks.forEach(function(l) { l.style.color = ""; });
+                var active = document.querySelector('.nav-links a[href="#' + s.id + '"]');
+                if (active) active.style.color = "#f0c040";
+            }
+        });
+    });
+
+})();
+</script>
+</body>
 </html>
-
