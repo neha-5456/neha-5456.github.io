@@ -33,6 +33,20 @@
         .nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--accent);transition:width .3s}
         .nav-links a:hover{color:var(--text)}.nav-links a:hover::after{width:100%}
 
+        /* HAMBURGER */
+        .nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:101}
+        .nav-hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:2px;transition:all .3s ease}
+        .nav-hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+        .nav-hamburger.active span:nth-child(2){opacity:0}
+        .nav-hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+
+        /* MOBILE MENU */
+        .mobile-menu{display:none;position:fixed;inset:0;background:rgba(10,10,15,.97);backdrop-filter:blur(30px);z-index:99;flex-direction:column;align-items:center;justify-content:center;gap:28px;opacity:0;pointer-events:none;transition:opacity .4s ease}
+        .mobile-menu.active{opacity:1;pointer-events:all}
+        .mobile-menu a{font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--text-dim);transition:color .3s;text-transform:uppercase;letter-spacing:2px}
+        .mobile-menu a:hover{color:var(--accent)}
+        .mobile-menu .mobile-socials{display:flex;gap:14px;margin-top:16px}
+
         /* BUTTONS */
         .btn-primary{padding:14px 32px;background:var(--accent);color:var(--bg);font-family:var(--font-display);font-weight:700;font-size:.95rem;border:none;border-radius:8px;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
         .btn-primary:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(240,192,64,.25);color:var(--bg)}
@@ -80,6 +94,10 @@
         .why-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:20px;background:var(--accent-glow);color:var(--accent);border:1px solid var(--accent-dim)}
         .why-card h4{font-size:1.15rem;margin-bottom:10px}.why-card p{font-size:.9rem;line-height:1.7}
 
+        /* ABOUT GRID */
+        .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+        .about-daily-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+
         /* TIMELINE */
         .timeline{position:relative;padding-left:48px}
         .timeline::before{content:'';position:absolute;left:18px;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--accent),var(--border))}
@@ -105,7 +123,7 @@
         .ptag-ml{background:#f8717115;color:var(--red);border:1px solid #f8717130}
         .ptag-backend{background:#34d39915;color:var(--green);border:1px solid #34d39930}
         .ptag-web{background:#60a5fa15;color:var(--blue);border:1px solid #60a5fa30}
-        .project-name{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;margin-bottom:6px}
+        .project-name{font-size:clamp(1.4rem,3vw,2.2rem);font-weight:800;margin-bottom:6px}
         .project-sub{font-size:.95rem;color:var(--accent);font-weight:600;margin-bottom:16px}
         .psi{display:flex;gap:12px;margin:10px 0;align-items:flex-start}
         .psi-label{min-width:72px;padding:4px 0;font-family:var(--font-mono);font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;flex-shrink:0}
@@ -153,11 +171,11 @@
         .mk-chatbot .mk-msg-ai{background:rgba(255,255,255,.05);color:#cbd5e1;align-self:flex-start;border-bottom-left-radius:2px}
         .mk-chatbot .mk-input{margin-top:auto;display:flex;gap:8px}
         .mk-chatbot .mk-input-box{flex:1;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;padding:8px 12px;font-size:.68rem;color:#64748b;font-family:var(--font-mono)}
-        .mk-chatbot .mk-send{width:32px;height:32px;background:#6366f1;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px}
+        .mk-chatbot .mk-send{width:32px;height:32px;background:#6366f1;border-radius:6px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;flex-shrink:0}
 
         /* VISA Interview mockup */
         .mk-visa .mockup-body{background:linear-gradient(135deg,#0f172a,#1a1632)}
-        .mk-visa .mk-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+        .mk-visa .mk-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px}
         .mk-visa .mk-badge{display:inline-flex;padding:3px 10px;background:rgba(52,211,153,.1);color:var(--green);border-radius:4px;font-size:.6rem;font-family:var(--font-mono);font-weight:600}
         .mk-visa .mk-question{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:16px;margin-bottom:12px}
         .mk-visa .mk-question h5{font-size:.85rem;color:#e2e8f0;margin-bottom:6px}
@@ -179,7 +197,7 @@
         .mk-sop .mk-tool-btn{width:26px;height:26px;border-radius:4px;background:rgba(255,255,255,.04);display:flex;align-items:center;justify-content:center;font-size:10px;color:#64748b}
         .mk-sop .mk-text-line{height:8px;background:rgba(255,255,255,.06);border-radius:3px;margin-bottom:6px}
         .mk-sop .mk-text-line.short{width:60%}.mk-sop .mk-text-line.mid{width:80%}.mk-sop .mk-text-line.highlight{background:rgba(99,102,241,.15)}
-        .mk-sop .mk-analysis{width:160px;background:rgba(255,255,255,.03);border-radius:8px;padding:12px}
+        .mk-sop .mk-analysis{width:160px;background:rgba(255,255,255,.03);border-radius:8px;padding:12px;flex-shrink:0}
         .mk-sop .mk-analysis h6{font-size:.6rem;color:var(--accent);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
         .mk-sop .mk-meter{margin-bottom:10px}
         .mk-sop .mk-meter-label{display:flex;justify-content:space-between;font-size:.55rem;color:#94a3b8;margin-bottom:3px;font-family:var(--font-mono)}
@@ -199,17 +217,17 @@
 
         /* Fraud mockup */
         .mk-fraud .mockup-body{background:#0f172a}
-        .mk-fraud .mk-alert-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);border-radius:6px;margin-bottom:14px;font-size:.68rem;color:#fca5a5}
+        .mk-fraud .mk-alert-bar{display:flex;align-items:center;gap:8px;padding:8px 12px;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2);border-radius:6px;margin-bottom:14px;font-size:.68rem;color:#fca5a5;flex-wrap:wrap}
         .mk-fraud .mk-transactions{display:flex;flex-direction:column;gap:6px}
-        .mk-fraud .mk-tx{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;font-size:.7rem}
+        .mk-fraud .mk-tx{display:flex;align-items:center;gap:10px;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;font-size:.7rem;flex-wrap:wrap}
         .mk-fraud .mk-tx-status{width:8px;height:8px;border-radius:50%;flex-shrink:0}
         .mk-fraud .mk-tx-ok{background:var(--green)}.mk-fraud .mk-tx-flag{background:var(--accent)}.mk-fraud .mk-tx-block{background:var(--red)}
-        .mk-fraud .mk-tx-info{flex:1;color:#94a3b8}.mk-fraud .mk-tx-amt{color:#e2e8f0;font-family:var(--font-mono);font-weight:600}
+        .mk-fraud .mk-tx-info{flex:1;color:#94a3b8;min-width:100px}.mk-fraud .mk-tx-amt{color:#e2e8f0;font-family:var(--font-mono);font-weight:600}
         .mk-fraud .mk-tx-label{font-size:.55rem;font-family:var(--font-mono);padding:2px 8px;border-radius:3px;font-weight:600}
         .mk-fraud .label-ok{background:rgba(52,211,153,.1);color:var(--green)}.mk-fraud .label-flag{background:rgba(240,192,64,.1);color:var(--accent)}.mk-fraud .label-block{background:rgba(248,113,113,.1);color:var(--red)}
 
         /* Scroll gallery */
-        .scroll-gallery{display:flex;overflow-x:auto;gap:12px;padding:10px 0;scroll-snap-type:x mandatory}
+        .scroll-gallery{display:flex;overflow-x:auto;gap:12px;padding:10px 0;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
         .scroll-gallery::-webkit-scrollbar{height:4px}.scroll-gallery::-webkit-scrollbar-thumb{background:var(--accent);border-radius:2px}
         .scroll-gallery .sg-item{flex-shrink:0;width:160px;scroll-snap-align:start;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
         .scroll-gallery .sg-item img{width:100%;display:block}
@@ -247,15 +265,116 @@
         .reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
         .reveal.d5{transition-delay:.5s}.reveal.d6{transition-delay:.6s}.reveal.d7{transition-delay:.7s}.reveal.d8{transition-delay:.8s}
 
-        /* RESPONSIVE */
-        @media(max-width:1024px){.hero-grid,.project-grid,.contact-grid{grid-template-columns:1fr;gap:40px}.hero-photo-frame{max-width:300px;margin:0 auto}.stats-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}#about .container>div{grid-template-columns:1fr!important}}
-        @media(max-width:640px){section{padding:60px 0}.stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}.stat-card{padding:20px 16px}.stat-num{font-size:2rem}.why-grid,.services-grid{grid-template-columns:1fr}.hero-float-card{display:none}.psi{flex-direction:column;gap:4px}.psi-label{min-width:auto}.cta-section{padding:40px 24px}.terminal{font-size:.68rem}.mk-learnify .mk-cards{grid-template-columns:repeat(2,1fr)}.mk-chatbot .mockup-body{flex-direction:column}.mk-chatbot .mk-sidebar{width:100%}.mk-sop .mockup-body{flex-direction:column}.mk-sop .mk-analysis{width:100%}.mk-visa .mk-scores{grid-template-columns:repeat(3,1fr)}.mk-churn .mk-metrics{grid-template-columns:repeat(3,1fr)}}
+        /* ========== RESPONSIVE ========== */
+
+        /* TABLET */
+        @media(max-width:1024px){
+            .hero-grid{grid-template-columns:1fr;gap:40px}
+            .hero-photo-frame{max-width:300px;margin:0 auto}
+            .project-grid{grid-template-columns:1fr;gap:32px}
+            .project-grid[style*="direction:rtl"]{direction:ltr !important}
+            .project-grid[style*="direction:rtl"]>*{direction:ltr !important}
+            .contact-grid{grid-template-columns:1fr;gap:32px}
+            .about-grid{grid-template-columns:1fr;gap:40px}
+            .stats-grid{grid-template-columns:repeat(4,1fr)}
+            .nav-links{display:none}
+            .nav-hamburger{display:flex}
+            .mobile-menu{display:flex}
+            .nav-inner .hero-socials{display:none}
+        }
+
+        /* MOBILE */
+        @media(max-width:768px){
+            .container{padding:0 16px}
+            section{padding:70px 0}
+            .stats-grid{grid-template-columns:repeat(2,1fr);gap:12px}
+            .stat-card{padding:24px 16px}
+            .stat-num{font-size:2.2rem}
+            .why-grid{grid-template-columns:1fr}
+            .services-grid{grid-template-columns:1fr}
+            .hero-float-card{display:none}
+            .hero-cta{flex-direction:column}
+            .hero-cta .btn-primary,.hero-cta .btn-outline{width:100%;justify-content:center}
+            .hero-title{font-size:clamp(2rem,8vw,3rem)}
+            .hero-desc{font-size:1rem}
+            .cta-section{padding:40px 20px;border-radius:14px}
+            .cta-section h3{font-size:1.4rem}
+            .terminal{font-size:.68rem;padding:28px 16px 16px}
+            .mockup-body{padding:16px;min-height:auto}
+            .mk-learnify .mk-cards{grid-template-columns:repeat(2,1fr)}
+            .mk-learnify .mk-nav{display:none}
+            .mk-learnify .mk-hero-text h3{font-size:1.1rem}
+            .mk-chatbot .mockup-body{flex-direction:column}
+            .mk-chatbot .mk-sidebar{width:100%}
+            .mk-sop .mockup-body{flex-direction:column}
+            .mk-sop .mk-analysis{width:100%}
+            .mk-churn .mk-metric-num{font-size:1rem}
+            .mk-visa .mk-scores{grid-template-columns:repeat(3,1fr);gap:6px}
+            .mk-visa .mk-score-num{font-size:1rem}
+            .project{padding:40px 0}
+            .project-name{font-size:1.4rem}
+            .about-daily-grid{grid-template-columns:1fr}
+            .why-card{padding:24px}
+            .svc-card{padding:24px}
+            .quick-facts{padding:24px}
+            .contact-actions-wrap{flex-direction:column}
+            .contact-actions-wrap .btn-primary,.contact-actions-wrap .btn-outline{width:100%;justify-content:center}
+        }
+
+        /* SMALL MOBILE */
+        @media(max-width:480px){
+            section{padding:50px 0}
+            .stats-grid{grid-template-columns:repeat(2,1fr);gap:8px}
+            .stat-card{padding:18px 12px}
+            .stat-num{font-size:1.8rem}
+            .stat-label{font-size:.75rem}
+            .hero-badges .badge{font-size:.65rem;padding:4px 10px}
+            .mk-churn .mk-metrics{grid-template-columns:1fr}
+            .mk-fraud .mk-tx{font-size:.62rem;padding:8px 10px;gap:6px}
+            .mk-fraud .mk-tx-info{min-width:60px;font-size:.6rem}
+            .mk-fraud .mk-tx-amt{font-size:.6rem}
+            .psi{flex-direction:column;gap:4px}
+            .psi-label{min-width:auto}
+            .project-img iframe{height:200px}
+            .scroll-gallery .sg-item{width:130px}
+        }
     </style>
 </head>
 <body>
 
 <!-- NAV -->
-<nav id="mainNav"><div class="container nav-inner"><a href="#hero" class="nav-logo">Neha<span>.</span></a><ul class="nav-links"><li><a href="#hero">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Work</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact</a></li></ul><div class="hero-socials"><a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a><a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a></div></div></nav>
+<nav id="mainNav"><div class="container nav-inner">
+    <a href="#hero" class="nav-logo">Neha<span>.</span></a>
+    <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hero-socials">
+        <a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+    <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
+</div></nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#projects" onclick="closeMenu()">Work</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#contact" onclick="closeMenu()">Contact</a>
+    <div class="mobile-socials">
+        <a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a>
+        <a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a class="social-btn" href="mailto:neha99iu@gmail.com"><i class="fas fa-envelope"></i></a>
+    </div>
+</div>
 
 <!-- HERO -->
 <section id="hero"><div class="hero-glow hero-glow-1"></div><div class="hero-glow hero-glow-2"></div><div class="container hero-grid"><div><div class="hero-tag reveal"><span class="dot"></span> Available for opportunities</div><h1 class="hero-title reveal d1">I Build<br><span class="gradient-text">Backends That Scale</span><br>&amp; AI That Ships</h1><p class="hero-desc reveal d2">Senior Backend Developer with 4+ years architecting high-performance APIs, GenAI pipelines, and ML-powered systems that handle real production traffic.</p><div class="hero-badges reveal d3"><span class="badge badge-accent">Python</span><span class="badge badge-accent">Django / DRF</span><span class="badge">LangChain</span><span class="badge">PostgreSQL</span><span class="badge">AWS</span><span class="badge">OpenAI GPT-4</span><span class="badge">XGBoost</span><span class="badge">Docker</span></div><div class="hero-cta reveal d4"><a href="#contact" class="btn-primary"><i class="fas fa-paper-plane"></i> Hire Me</a><a href="#" class="btn-outline"><i class="fas fa-download"></i> Download CV</a></div><div class="hero-socials reveal d5"><a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a><a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-btn" href="mailto:neha99iu@gmail.com"><i class="fas fa-envelope"></i></a></div></div><div class="hero-photo reveal d3"><div class="hero-photo-frame"><img src="img/header-img.jpg" alt="Neha Jaiswal"></div><div class="hero-float-card card-1 reveal d5"><div class="float-label">Daily API Requests</div><div class="float-value">50K+</div></div><div class="hero-float-card card-2 reveal d6"><div class="float-label">API Uptime</div><div class="float-value">99.5%</div></div></div></div></section>
@@ -267,8 +386,8 @@
 <section id="why"><div class="container"><div class="section-label reveal">Value Proposition</div><h2 class="section-title reveal d1">Why Hire <span class="gradient-text">Me?</span></h2><div class="why-grid"><div class="why-card reveal d1"><div class="why-icon"><i class="fas fa-server"></i></div><h4>I Ship Production Code, Not Demos</h4><p>Every project handles real users and real traffic. 50K+ daily requests, 99.5% uptime, live on Google Play — not tutorial clones or GitHub-only code.</p></div><div class="why-card reveal d2"><div class="why-icon"><i class="fas fa-robot"></i></div><h4>AI That Works in Production</h4><p>I don't just call OpenAI APIs. I build complete GenAI backends — RAG pipelines with FAISS/ChromaDB, embedding optimization, hallucination reduction, and cost-optimized inference.</p></div><div class="why-card reveal d3"><div class="why-icon"><i class="fas fa-tachometer-alt"></i></div><h4>Backend + ML = Full Pipeline</h4><p>Most backend devs can't do ML. Most ML engineers can't build APIs. I do both — from data preprocessing &amp; model training (92% ROC-AUC) to production REST endpoints.</p></div><div class="why-card reveal d4"><div class="why-icon"><i class="fas fa-users"></i></div><h4>I Grow Teams, Not Just Code</h4><p>Currently mentoring 3 junior devs. I write code others can maintain, define API contracts teams can work with, and establish review practices that improve quality.</p></div></div></div></section>
 
 <!-- ABOUT + TIMELINE -->
-<section id="about"><div class="container"><div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;"><div><div class="section-label reveal">About Me</div><h2 class="section-title reveal d1">I Don't Just Write Code —<br>I <span class="gradient-text">Architect Solutions</span></h2><p class="reveal d2" style="font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Over 4+ years, I've evolved from writing Django CRUD APIs to designing complete backend ecosystems — microservices handling 50K+ daily requests, GenAI pipelines that reduce LLM hallucinations, and ML models serving real-time predictions.</p>
-<div class="reveal d3" style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px;"><h5 style="font-size:.95rem;color:var(--accent);margin-bottom:14px;">What I Actually Do Daily</h5><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;"><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Design API architectures</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Build RAG pipelines</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Optimize DB queries 20%+</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Deploy AWS + Docker</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Train &amp; serve ML models</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Mentor junior devs</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Define API contracts</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Code review &amp; QA</p></div></div>
+<section id="about"><div class="container"><div class="about-grid"><div><div class="section-label reveal">About Me</div><h2 class="section-title reveal d1">I Don't Just Write Code —<br>I <span class="gradient-text">Architect Solutions</span></h2><p class="reveal d2" style="font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Over 4+ years, I've evolved from writing Django CRUD APIs to designing complete backend ecosystems — microservices handling 50K+ daily requests, GenAI pipelines that reduce LLM hallucinations, and ML models serving real-time predictions.</p>
+<div class="reveal d3" style="background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:24px;"><h5 style="font-size:.95rem;color:var(--accent);margin-bottom:14px;">What I Actually Do Daily</h5><div class="about-daily-grid"><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Design API architectures</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Build RAG pipelines</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Optimize DB queries 20%+</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Deploy AWS + Docker</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Train &amp; serve ML models</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Mentor junior devs</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Define API contracts</p><p style="font-size:.85rem;margin:0;display:flex;align-items:center;gap:8px;"><span style="color:var(--green);">→</span> Code review &amp; QA</p></div></div>
 <div class="reveal d4"><div class="stack-category"><div class="stack-label">Languages &amp; Frameworks</div><div><span class="badge badge-accent">Python</span><span class="badge badge-accent">Django</span><span class="badge badge-accent">DRF</span><span class="badge">REST APIs</span></div></div><div class="stack-category"><div class="stack-label">AI / ML</div><div><span class="badge">LangChain</span><span class="badge">OpenAI GPT-4</span><span class="badge">Whisper</span><span class="badge">FAISS</span><span class="badge">ChromaDB</span><span class="badge">XGBoost</span><span class="badge">Scikit-learn</span></div></div><div class="stack-category"><div class="stack-label">Databases &amp; Caching</div><div><span class="badge">PostgreSQL</span><span class="badge">MySQL</span><span class="badge">Redis</span><span class="badge">Celery</span></div></div><div class="stack-category"><div class="stack-label">DevOps &amp; Cloud</div><div><span class="badge">AWS (EC2, S3, RDS)</span><span class="badge">Docker</span><span class="badge">Nginx</span><span class="badge">CI/CD</span><span class="badge">Git</span></div></div></div></div>
 <div><div class="section-label reveal">Career</div><h2 class="section-title reveal d1" style="font-size:1.8rem;">My <span class="gradient-text">Journey</span></h2><div class="timeline reveal d2"><div class="tl-item current"><div class="tl-dot"></div><div class="tl-date">Nov 2025 — Present</div><div class="tl-role">Senior Backend Dev &amp; AI Lead</div><div class="tl-company">RTC Knowledge Services</div><div class="tl-tags"><span class="tl-tag tl-tag-gold">GenAI</span><span class="tl-tag tl-tag-green">Team Lead</span></div></div><div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Aug 2022 — Sep 2025</div><div class="tl-role">Backend Developer</div><div class="tl-company">Tech Prastish Software Solutions</div><div class="tl-tags"><span class="tl-tag tl-tag-gold">RAG / LangChain</span><span class="tl-tag tl-tag-blue">ML Pipelines</span></div></div><div class="tl-item"><div class="tl-dot"></div><div class="tl-date">Jan 2021 — Jul 2022</div><div class="tl-role">Python / Django Developer</div><div class="tl-company">Baseline IT Development</div><div class="tl-tags"><span class="tl-tag tl-tag-blue">Django APIs</span><span class="tl-tag tl-tag-green">Payments</span></div></div><div class="tl-item"><div class="tl-dot"></div><div class="tl-date">2016 — 2020</div><div class="tl-role">B.Tech Computer Science</div><div class="tl-company">SBSS University</div></div></div>
 <div class="reveal d3" style="margin-top:40px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:24px;"><h5 style="font-size:.95rem;color:var(--accent);margin-bottom:12px;">Education &amp; Certifications</h5><p style="font-size:.9rem;margin-bottom:8px;"><strong style="color:var(--text);">B.Tech Computer Science</strong> — SBSS University (2016-2020)</p><p style="font-size:.85rem;color:var(--text-muted);margin:0;">Certified: Data Science with Python · Django Developer · PostgreSQL &amp; Window Functions</p></div></div></div></div></section>
@@ -410,7 +529,7 @@
             <div class="mk-chart">
                 <div class="mk-bar" style="height:20%;background:var(--green);"></div><div class="mk-bar" style="height:35%;background:var(--green);"></div><div class="mk-bar" style="height:55%;background:var(--green);"></div><div class="mk-bar" style="height:70%;background:var(--green);"></div><div class="mk-bar" style="height:85%;background:var(--blue);"></div><div class="mk-bar" style="height:65%;background:var(--blue);"></div><div class="mk-bar" style="height:45%;background:var(--accent);"></div><div class="mk-bar" style="height:30%;background:var(--accent);"></div><div class="mk-bar" style="height:20%;background:var(--red);"></div><div class="mk-bar" style="height:12%;background:var(--red);"></div>
             </div>
-            <div style="display:flex;gap:12px;margin-top:8px;font-size:.55rem;font-family:var(--font-mono);color:#64748b;"><span><span style="color:var(--green);">■</span> Low</span><span><span style="color:var(--blue);">■</span> Medium</span><span><span style="color:var(--accent);">■</span> High</span><span><span style="color:var(--red);">■</span> Critical</span></div>
+            <div style="display:flex;gap:12px;margin-top:8px;font-size:.55rem;font-family:var(--font-mono);color:#64748b;flex-wrap:wrap;"><span><span style="color:var(--green);">■</span> Low</span><span><span style="color:var(--blue);">■</span> Medium</span><span><span style="color:var(--accent);">■</span> High</span><span><span style="color:var(--red);">■</span> Critical</span></div>
         </div>
     </div>
 </div>
@@ -501,10 +620,10 @@
 <div class="contact-item"><div class="contact-icon"><i class="fab fa-linkedin-in"></i></div><div><h5>LinkedIn</h5><p><a href="https://www.linkedin.com/in/neha-jaiswal-434b97160/">linkedin.com/in/neha-jaiswal</a></p></div></div>
 <div class="contact-item"><div class="contact-icon"><i class="fab fa-github"></i></div><div><h5>GitHub</h5><p><a href="https://github.com/neha-5456">github.com/neha-5456</a></p></div></div></div>
 <div class="reveal d3"><div class="quick-facts"><h4><i class="fas fa-bolt" style="margin-right:8px;"></i> Quick Facts</h4><p><i class="fas fa-check-circle"></i> Available for full-time opportunities</p><p><i class="fas fa-check-circle"></i> Open to remote &amp; hybrid roles</p><p><i class="fas fa-check-circle"></i> 4+ years production experience</p><p><i class="fas fa-check-circle"></i> Backend + AI/ML dual expertise</p><p><i class="fas fa-check-circle"></i> Immediate availability</p></div>
-<div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;"><a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV</a><a href="mailto:neha99iu@gmail.com" class="btn-outline"><i class="fas fa-paper-plane"></i> Send Email</a></div></div></div></div></section>
+<div class="contact-actions-wrap" style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;"><a href="#" class="btn-primary"><i class="fas fa-download"></i> Download CV</a><a href="mailto:neha99iu@gmail.com" class="btn-outline"><i class="fas fa-paper-plane"></i> Send Email</a></div></div></div></div></section>
 
 <!-- FOOTER -->
-<footer><div class="container"><div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px;"><a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a><a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-btn" href="https://www.instagram.com/coderevisit21720/" target="_blank"><i class="fab fa-instagram"></i></a></div><p>&copy; 2025 Neha Jaiswal. All rights reserved.</p></div></footer>
+<footer><div class="container"><div style="display:flex;justify-content:center;gap:12px;margin-bottom:16px;flex-wrap:wrap;"><a class="social-btn" href="https://github.com/neha-5456" target="_blank"><i class="fab fa-github"></i></a><a class="social-btn" href="https://www.linkedin.com/in/neha-jaiswal-434b97160/" target="_blank"><i class="fab fa-linkedin-in"></i></a><a class="social-btn" href="https://www.youtube.com/@codeRevisit/" target="_blank"><i class="fab fa-youtube"></i></a><a class="social-btn" href="https://www.instagram.com/coderevisit21720/" target="_blank"><i class="fab fa-instagram"></i></a></div><p>&copy; 2025 Neha Jaiswal. All rights reserved.</p></div></footer>
 
 <!-- BACK TO TOP -->
 <a href="#" id="backToTop" class="btn-primary" style="position:fixed;right:24px;bottom:24px;width:48px;height:48px;border-radius:12px;display:none;align-items:center;justify-content:center;z-index:99;padding:0;font-size:18px;box-shadow:0 8px 24px rgba(240,192,64,.3);"><i class="fas fa-arrow-up"></i></a>
@@ -516,6 +635,21 @@ var ro=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isInterse
 document.querySelectorAll(".reveal").forEach(function(el){ro.observe(el)});
 var nav=document.getElementById("mainNav");
 window.addEventListener("scroll",function(){nav.classList.toggle("scrolled",window.scrollY>60)});
+
+// Mobile menu
+var hamburger=document.getElementById("navHamburger");
+var mobileMenu=document.getElementById("mobileMenu");
+hamburger.addEventListener("click",function(){
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+    document.body.style.overflow=mobileMenu.classList.contains("active")?"hidden":"";
+});
+window.closeMenu=function(){
+    hamburger.classList.remove("active");
+    mobileMenu.classList.remove("active");
+    document.body.style.overflow="";
+};
+
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener("click",function(e){var t=document.querySelector(this.getAttribute("href"));if(t){e.preventDefault();t.scrollIntoView({behavior:"smooth",block:"start"})}})});
 var btt=document.getElementById("backToTop");
 window.addEventListener("scroll",function(){btt.style.display=window.scrollY>400?"flex":"none"});
